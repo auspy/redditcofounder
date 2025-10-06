@@ -3,10 +3,10 @@ const plugin = require("tailwindcss/plugin");
 
 const colors = {
   border: "#e5e5e5",
-  primary: "#4338CA",
+  primary: "#FF4500",
   dark: "#151515",
-  lightPurple: "#F3E8FF",
-  accent: "#FF9500",
+  lightPurple: "#FFE3D4",
+  accent: "#FF6A33",
   background: "#f9f9f9",
 };
 
@@ -33,18 +33,18 @@ const config = {
     extend: {
       colors: {
         ...colors,
-        // Override blue colors with indigo for darker, bluish-purple theme
+        // Override blue palette with reddish-orange shades for Reddit-inspired theme
         blue: {
-          50: '#eef2ff',   // indigo-50
-          100: '#e0e7ff',  // indigo-100
-          200: '#c7d2fe',  // indigo-200
-          300: '#a5b4fc',  // indigo-300
-          400: '#818cf8',  // indigo-400
-          500: '#6366f1',  // indigo-500
-          600: '#4338ca',  // indigo-600 (primary)
-          700: '#3730a3',  // indigo-700
-          800: '#312e81',  // indigo-800
-          900: '#1e1b4b',  // indigo-900
+          50: '#fff4ed',
+          100: '#ffe5d6',
+          200: '#ffc8ac',
+          300: '#ffaa83',
+          400: '#ff8c59',
+          500: '#ff6e30',
+          600: '#ff4500',
+          700: '#d83a00',
+          800: '#ad2f00',
+          900: '#822400',
         },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
