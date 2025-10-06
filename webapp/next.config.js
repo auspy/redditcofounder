@@ -20,7 +20,9 @@ const nextConfig = {
     YEARLY_IN_PRODUCT_ID: process.env.YEARLY_IN_PRODUCT_ID,
   },
   images: {
-    remotePatterns: ["images.unsplash.com"],
+    remotePatterns: [{
+      hostname: "images.unsplash.com",
+    }],
   },
   async headers() {
     return [
