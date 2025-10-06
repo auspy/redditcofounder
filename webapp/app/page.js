@@ -69,11 +69,11 @@ const creativePackFeatures = [
 // Homepage configuration for Reddit CoFounder
 const homepageConfig = {
   hero: {
-    preTitle: "Your Reddit Co-Founder",
-    title: "100K+ views in 7 days - Guaranteed or Refund",
+    preTitle: "Reddit Marketing on AutoPilot",
+    title: <><span className="text-primary">50K+ Organic Views</span> in <br className="hidden md:block" /> 7 days Guaranteed</>,
     description: (
       <>
-        I didn't hit $10k MRR. I built a repeatable Reddit system instead: 27 posts → 2M+ impressions (avg ~70k each). You build. I bring the traffic.
+        Get organic traffic to your product through Reddit without lifting a finger, while you sleep. You build the product. I bring the traffic.
       </>
     ),
     lessonHeader: true,
@@ -88,7 +88,7 @@ const homepageConfig = {
       // "50k+ Guaranteed or Refund",
     ],
     showTestimonial: false,
-    videoSrc: "/reddit-dashboard.png",
+    videoSrc: "/50k.png",
     customButtons: [
       {
         text: "Start the Quick Test — $350 (10 pilot slots)",

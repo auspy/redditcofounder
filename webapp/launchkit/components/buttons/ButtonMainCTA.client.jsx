@@ -18,6 +18,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 // import { useBootstrapFlags } from "@/components/analytics/PostHogProvider";
 import { FEATURE_FLAGS, getCTATextByVariant } from "@/lib/flags/featureFlags";
 import { FreeForeverLink } from "@/components/alerts/MoneyBackGuaranteeAlert";
+import { LightningBoltIcon } from "@radix-ui/react-icons";
 
 export default function ButtonMainCTAClient({
   align = "center",
@@ -115,7 +116,7 @@ export default function ButtonMainCTAClient({
 
   const content = (
     <>
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 40 40"
         id="apple"
@@ -132,7 +133,16 @@ export default function ButtonMainCTAClient({
         )}
       >
         <path d="M30.54 26.24a14 14 0 0 1-1.41 2.52 13.16 13.16 0 0 1-1.8 2.24A3.55 3.55 0 0 1 25 32a5.94 5.94 0 0 1-2.15-.51 6.13 6.13 0 0 0-2.31-.49 6.42 6.42 0 0 0-2.38.51 6.49 6.49 0 0 1-2.05.54A3.35 3.35 0 0 1 13.73 31a14 14 0 0 1-1.89-2.27 15.54 15.54 0 0 1-2-4A14.55 14.55 0 0 1 9 20a8.6 8.6 0 0 1 1.14-4.52A6.6 6.6 0 0 1 12.51 13a6.44 6.44 0 0 1 3.22-.91 7.7 7.7 0 0 1 2.49.58 7.67 7.67 0 0 0 2 .58 12 12 0 0 0 2.19-.68 7.23 7.23 0 0 1 3-.53 6.34 6.34 0 0 1 4.95 2.61 5.48 5.48 0 0 0-2.92 5 5.52 5.52 0 0 0 1.81 4.16A6.18 6.18 0 0 0 31 25c-.15.42-.3.82-.46 1.21ZM25.5 6.4a5.59 5.59 0 0 1-1.43 3.66 4.85 4.85 0 0 1-4 2 3.79 3.79 0 0 1 0-.49 5.7 5.7 0 0 1 1.51-3.69 5.85 5.85 0 0 1 1.85-1.39 5.65 5.65 0 0 1 2.11-.6 4.67 4.67 0 0 1 0 .52Z"></path>
-      </svg>
+      </svg> */}
+      <LightningBoltIcon   className={cn(
+          "fill-blue-500",
+          type === "small" &&
+            "[.hover>&]:fill-white [button:hover>&]:fill-white",
+          type === "large" && mode === "dark"
+            ? "fill-primary [.hover>&]:fill-white [button:hover>&]:fill-white"
+            : type === "large" &&
+                "fill-white [.hover>&]:fill-primary [button:hover>&]:fill-primary"
+        )} />
       <div className="flex flex-col items-center leading-tight">
         <span>{textis}</span>
       </div>
@@ -233,7 +243,7 @@ export default function ButtonMainCTAClient({
     >
       <div className={`flex items-${align} flex-col gap-1 mt-0.5`}>
         <p className="text-gray-600 w-fit text-sm font-regular p-0 h-fit">
-          7 Day Trial - No Credit Card Required
+          50% Discount for First 5 Clients
         </p>
       </div>
       <div className="flex flex-wrap items-center sm:justify-center gap-4">
@@ -244,7 +254,7 @@ export default function ButtonMainCTAClient({
           className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:brightness-110 transition-all px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl group relative"
           disabled={isLoading}
         >
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 40 40"
             id="apple"
@@ -254,7 +264,8 @@ export default function ButtonMainCTAClient({
             fill="white"
           >
             <path d="M30.54 26.24a14 14 0 0 1-1.41 2.52 13.16 13.16 0 0 1-1.8 2.24A3.55 3.55 0 0 1 25 32a5.94 5.94 0 0 1-2.15-.51 6.13 6.13 0 0 0-2.31-.49 6.42 6.42 0 0 0-2.38.51 6.49 6.49 0 0 1-2.05.54A3.35 3.35 0 0 1 13.73 31a14 14 0 0 1-1.89-2.27 15.54 15.54 0 0 1-2-4A14.55 14.55 0 0 1 9 20a8.6 8.6 0 0 1 1.14-4.52A6.6 6.6 0 0 1 12.51 13a6.44 6.44 0 0 1 3.22-.91 7.7 7.7 0 0 1 2.49.58 7.67 7.67 0 0 0 2 .58 12 12 0 0 0 2.19-.68 7.23 7.23 0 0 1 3-.53 6.34 6.34 0 0 1 4.95 2.61 5.48 5.48 0 0 0-2.92 5 5.52 5.52 0 0 0 1.81 4.16A6.18 6.18 0 0 0 31 25c-.15.42-.3.82-.46 1.21ZM25.5 6.4a5.59 5.59 0 0 1-1.43 3.66 4.85 4.85 0 0 1-4 2 3.79 3.79 0 0 1 0-.49 5.7 5.7 0 0 1 1.51-3.69 5.85 5.85 0 0 1 1.85-1.39 5.65 5.65 0 0 1 2.11-.6 4.67 4.67 0 0 1 0 .52Z"></path>
-          </svg>
+          </svg> */}
+          <LightningBoltIcon  className="mr-2 transition-all duration-300 transform group-hover:-translate-x-8 group-hover:opacity-0" />
           <span className="transition-all duration-300 group-hover:-translate-x-8">
             {textis}
           </span>
@@ -274,7 +285,16 @@ export default function ButtonMainCTAClient({
             <path d="m12 5 7 7-7 7"></path>
           </svg>
         </FancyButton>
-        {/* <ButtonHowItWorks />*/}
+        {/* <ButtonHowItWorks /> */}
+        <button
+onClick={() => {
+  router.push("/#pricing");
+}}
+        className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition-all px-4 py-3 text-sm font-medium ${className}`}
+      >
+        Talk to Founder
+      </button>
+        
       </div>
       <div className={`flex items-${align} flex-col gap-1 mt-0.5`}>
         <Button
@@ -284,7 +304,7 @@ export default function ButtonMainCTAClient({
             router.push("/#pricing");
           }}
         >
-          $9.99 - One time payment
+          50k+ views or full refund
           <ArrowRight className="w-3 h-3 ml-2" />
         </Button>
       </div>

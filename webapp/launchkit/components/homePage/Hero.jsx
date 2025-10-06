@@ -71,7 +71,6 @@ export default function Hero({
   breadcrumb = null,
   showTestimonial = true,
 }) {
-  console.log("align", align);
   // Dynamically get the icon component if specified
   const PrimaryIcon = primaryButton?.icon ? Icons[primaryButton.icon] : null;
   const SecondaryIcon = secondaryButton?.icon
@@ -80,9 +79,9 @@ export default function Hero({
   return (
     <div
       className={cn(
-        "flex wrapper bg-blue flex-col gap-6 items-center pt-[7.5%] justify-between",
+        "flex wrapper bg-blue flex-col gap-6 items-center pt-[4%] justify-between",
         align === "center" ? "items-center" : "items-start",
-        breadcrumb && "pt-4 md:pt-8"
+        breadcrumb && "pt-4 md:pt-8",
       )}
     >
       {breadcrumb && (
@@ -197,6 +196,7 @@ export default function Hero({
             <div className="flex gap-4">
               {primaryButton.text.toLowerCase().includes("download") ? (
                 <ButtonMainCTA
+                href={"/#pricing"}
                   type={downloadButtonType}
                   location={Locations.HERO}
                 />
@@ -234,6 +234,7 @@ export default function Hero({
           ) : (
             <ButtonMainCTA
               align={align}
+              href={"/#pricing"}
               type={downloadButtonType}
               location={Locations.HERO}
             />
@@ -283,7 +284,7 @@ const HeroVideo = ({ videoSrc = "/hero_2.mp4" }) => {
         alt="Hero Image"
         width={1940}
         height={1150}
-        className="relative object-cover"
+        className="relative object-cover rounded-3xl shadow-2xl border border-primary p-1 bg-primary/15"
       />
     );
   }

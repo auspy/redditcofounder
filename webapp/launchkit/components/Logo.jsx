@@ -26,7 +26,7 @@ export default function Logo({
       /> */}
       {!onlyLogo && <div className="text-2xl font-bold ">RedditCoFounder</div>}
       {/* beta text*/}
-      {showBeta && <span className="text-sm text-gray-500">Beta</span>}
+      {/* {showBeta && <span className="text-sm text-gray-500">(5 Slots)</span>} */}
     </Link>
   );
 }

@@ -141,7 +141,7 @@ const DesktopNavigation = ({ navigation, router, bootstrap }) => {
               return (
                 <NavigationMenuItem key={index}>
                   <ButtonMainCTAClient
-                    text="Get Started"
+                    // text="Get Started"
                     href="/#pricing"
                     type="small"
                     location={Locations.HEADER}
@@ -288,7 +288,7 @@ const MobileNavigation = ({ navigation, bootstrap }) => {
               if (item.isDownloadButton) {
                 return (
                   <ButtonMainCTAClient
-                        text="Get Started"
+                        // text="Get Started"
                     href="/#pricing"
                     key={index}
                     type="small"
@@ -476,7 +476,7 @@ export default function Header({ bootstrap = null }) {
   ].filter(Boolean);
 
   return (
-    <div className="w-screen z-50 sticky top-0 bg-white border-b border-primary/15 flex justify-center">
+    <div className="w-screen z-50 sticky top-0 bg-white border-b border-gray-200 flex justify-center">
       <div className="h-[60px] contain flex justify-between items-center w-full">
         <div className="flex">
           <Logo showBeta={true} />
