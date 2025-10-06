@@ -6,112 +6,136 @@ export function generateStaticParams() {
   return [];
 }
 
-const proFeatures = [
+const quickTestFeatures = [
   {
-    title: "Unlimited Spaces",
-    desc: "Organize links exactly how you want",
+    title: "3 competitor strategy mini-report",
+    desc: "Research on what's working in your space",
   },
   {
-    title: "Risk Free - Cancel Anytime",
-    desc: "Cancel in 14 days, get a full refund",
+    title: "5 posts across relevant subs",
+    desc: "Strategic content crafted for maximum engagement",
   },
   {
-    title: "Early Access",
-    desc: "Get early access to new features",
+    title: "7 days engagement",
+    desc: "Active comment management and community interaction",
   },
   {
-    title: "Priority Support",
-    desc: "Talk directly to the developer.",
-  },
-];
-const lifetimeFeatures = [
-  {
-    title: "Unlimited Spaces",
-    desc: "Organize links exactly how you want",
+    title: "Report + screenshots",
+    desc: "Detailed analytics with visual proof of results",
   },
   {
-    title: "Buy Once, Use Forever",
-    desc: "5 devices can be active at a time",
-  },
-  {
-    title: "Early Access",
-    desc: "Get early access to new features",
-  },
-  {
-    title: "Priority Support",
-    desc: "Talk directly to the developer.",
+    title: "50k+ views guaranteed or refund",
+    desc: "Risk-free with full money-back guarantee",
   },
 ];
 
-const freeFeatures = [
+const monthlyGrowthFeatures = [
   {
-    title: "All Major Browsers Supported",
-    desc: "Safari, Dia, Chrome, Firefox, Arc and more",
+    title: "8–12 posts monthly",
+    desc: "Consistent content calendar for sustained growth",
   },
   {
-    title: "1 Space Included",
-    desc: "Perfect for daily use",
+    title: "Daily engagement",
+    desc: "Ongoing comment management and community building",
   },
   {
-    title: "7 Day Trial - No Credit Card",
-    desc: "Try pro 7 days, then continue free forever",
+    title: "Competitor monitoring",
+    desc: "Stay ahead with continuous competitive analysis",
+  },
+  {
+    title: "Weekly reports",
+    desc: "Regular performance updates and insights",
+  },
+  {
+    title: "Target 200k+ monthly",
+    desc: "Aggressive growth targets with proven methods",
   },
 ];
-// Homepage configuration for SupaSidebar
+
+const creativePackFeatures = [
+  {
+    title: "1 demo video (30–60s)",
+    desc: "Professional video content optimized for Reddit",
+  },
+  {
+    title: "2–3 images formatted for Reddit",
+    desc: "Custom graphics designed for maximum impact",
+  },
+  {
+    title: "Cross-platform optimization",
+    desc: "Assets work across different subreddits and contexts",
+  },
+];
+// Homepage configuration for Reddit CoFounder
 const homepageConfig = {
   hero: {
-    title: "Arc-like Sidebar for Mac",
-    // subtitle: "for Mac",
+    preTitle: "Your Reddit Co-Founder",
+    title: "100K+ views in 7 days - Guaranteed or Refund",
     description: (
       <>
-        SupaSidebar is a menubar app that helps you save links, files and
-        folders from any browser or finder just a click away.
+        I didn't hit $10k MRR. I built a repeatable Reddit system instead: 27 posts → 2M+ impressions (avg ~70k each). You build. I bring the traffic.
       </>
     ),
     lessonHeader: true,
-    headingClassNames: "!leading-[1.2] gap-2 text-4xl md:text-5xl lg:text-6xl",
+    headingClassNames: "!leading-[1.2] gap-2 text-3xl md:text-4xl lg:text-6xl",
+    // subtitle: "50,000+ impressions in 7 days — guaranteed or refund",
     downloadButtonType: "hero",
-    showLogo: true,
+    showLogo: false,
     align: "center",
     keyPoints: [
-      "Multi-Browser Support",
-      "Global Keyboard Shortcuts",
-      "Designed for Mac",
+      // "2,000,000+ Organic Impressions",
+      // "27 Posts Over 10k Views",
+      // "50k+ Guaranteed or Refund",
     ],
     showTestimonial: false,
-    videoSrc: "/macbook.png",
+    videoSrc: "/reddit-dashboard.png",
+    customButtons: [
+      {
+        text: "Start the Quick Test — $350 (10 pilot slots)",
+        href: "#stripe-checkout",
+        variant: "primary",
+        size: "lg"
+      },
+      {
+        text: "DM on Twitter/X",
+        href: "https://twitter.com/messages/compose?recipient_id=placeholder",
+        variant: "outline",
+        size: "lg"
+      }
+    ],
   },
 
   sections: {
     // Currently disabled sections (commented out in original)
     focusLossProblem: { enabled: false },
-    trustedBy: { enabled: false },
+    productivityLoss: { enabled: false },
     testimonialSingle: { enabled: false },
+    impactSection: { enabled: false },
     pricing: {
       enabled: true,
       props: {
         pricingConfig: {
-          model: "subscription",
+          model: "service",
           defaultSelection: "main",
           animationBehavior: "minimal",
 
           // Header customization
           header: {
-            title: "Honest and affordable pricing",
+            title: "Choose Your Reddit Growth Package",
             description:
-              "No ads, hidden fees, or shenanigans. Your data stays private, and I get to focus on building the best product for you. SupaSidebar comes with a {trialDays}-day trial as well. So you can explore before you commit.",
-            showTrialDays: true,
+              "No contracts, no BS. Just guaranteed Reddit traffic for your product. Start with a risk-free test or commit to ongoing growth.",
+            showTrialDays: false,
           },
 
           // Notice/banner configuration
           notices: {
             betaPricing: {
-              show: false, // Disable beta pricing banner
+              show: false,
             },
             customBanner: {
               show: true,
-              title: "Limited Time Offer",
-              description: "Get 50% off on lifetime - beta only offer!",
+              title: "Intro Pricing",
+              description: "First 10 clients get Quick Test for $350 (regular $500)",
               style: "success",
             },
           },
@@ -119,20 +143,20 @@ const homepageConfig = {
           // Footer customization
           footer: {
             legalText:
-              "Prices in USD. Taxes may apply outside US. Requires macOS 13+.",
-            contactText: "Questions about pricing?",
-            contactLinkText: "Get in touch",
+              "Prices in USD. 50k+ impressions guaranteed on Quick Test or full refund.",
+            contactText: "Questions about the service?",
+            contactLinkText: "DM on Twitter/X",
           },
 
           // Additional components
           additionalComponents: {
             moneyBackGuarantee: {
               show: true,
-              days: 14,
+              days: 7,
+              text: "50,000+ impressions guaranteed or full refund"
             },
             studentDiscount: {
               show: false,
-              percentage: 30,
             },
             lowIncomeDiscount: {
               show: false,
@@ -141,43 +165,35 @@ const homepageConfig = {
 
           stableCards: [
             {
-              type: "pricing", // Use pricing card type for $0 card
-              title: "Free Forever",
-              price: 0, // $0 price
-              buttonText: "Download For Free",
-              billingCycle: "free",
-              beforeButtonNote: "For most users",
-              features: freeFeatures,
+              type: "pricing",
+              title: "Quick Test",
+              subtitle: "7 days",
+              price: 350,
+              originalPrice: 700,
+              buttonText: "Start Quick Test",
+              billingCycle: "one-time",
+              beforeButtonNote: "Intro price - first 10 clients",
+              // highlightedText: "50k+ views guaranteed",
+              // highlightTheme: "green",
+              features: quickTestFeatures,
             },
-            // {
-            //   type: "pricing",
-            //   beforeButtonNote: "For testing pro + Support development ♥️",
-            //   title: "Pro Monthly",
-            //   highlightedText: "Launch Month Discount",
-            //   highlightTheme: "purple",
-            //   price: 3.99, // Actual discounted price
-            //   originalPrice: 7.99, // Crossed out price
-            //   buttonText: "Lock in $3.99/month forever",
-            //   billingCycle: "monthly",
-            //   features: proFeatures,
-            // },
             {
               type: "pricing",
-              beforeButtonNote: "This supports development ♥️",
-              title: "Lifetime",
-              devices: 5,
-              highlightedText: "Early Support Discount",
-              highlightTheme: "purple",
-              price: 9.99, // Actual discounted price
-              originalPrice: 19.99, // Crossed out price
-              buttonText: "Get Lifetime License",
-              billingCycle: "lifetime",
-              features: lifetimeFeatures,
+              title: "Monthly Growth",
+              subtitle: "4 weeks",
+              price: 1200,
+              originalPrice: 2400,
+              buttonText: "Book Intro Call",
+              billingCycle: "monthly",
+              beforeButtonNote: "For ongoing growth",
+              highlightedText: "200k+ monthly target",
+              highlightTheme: "blue",
+              features: monthlyGrowthFeatures,
             },
           ],
           toggleOptions: [
             {
-              label: "Subscription & Lifetime",
+              label: "Service Packages",
               value: "main",
               cards: [], // Use stableCards only
             },
@@ -189,10 +205,60 @@ const homepageConfig = {
 
     // Enabled sections with default props
     // featureBanner: { enabled: true },
-    featureList: { enabled: true },
-    impactSection: { enabled: false },
+    featureList: {
+      enabled: true,
+      props: {
+        title: "How It Works",
+        subtitle: "No bans. No guesswork. You don't lift a finger.",
+        features: [
+          {
+            step: "1",
+            title: "You share the site + 2 lines on the product",
+            description: "Quick briefing on your product and target audience"
+          },
+          {
+            step: "2",
+            title: "I pick subreddits, craft 5 posts, and schedule",
+            description: "Strategic research and content creation for maximum impact"
+          },
+          {
+            step: "3",
+            title: "I publish + handle comments for 7 days",
+            description: "Active engagement and community management"
+          },
+          {
+            step: "4",
+            title: "You get a report (impressions, upvotes, comments, clicks, next steps)",
+            description: "Detailed analytics and recommendations for continued growth"
+          }
+        ]
+      }
+    },
     testimonials: { enabled: false },
-    cta: { enabled: true },
+    // guarantee: {
+    //   enabled: true,
+    //   props: {
+    //     title: "50,000+ views in 7 days or your money back",
+    //     description: "Impressions counted via Reddit analytics (screenshots). If the campaign totals <50k after 7 days, I refund 100%.",
+    //     badgeText: "Guaranteed",
+    //     highlightText: "50,000+ views in 7 days or your money back"
+    //   }
+    // },
+    cta: {
+      enabled: true,
+      props: {
+        title: "Test Reddit without risk",
+        description: "Start building your Reddit presence today with guaranteed results.",
+        primaryButton: {
+          text: "Start the Quick Test — $350",
+          href: "#stripe-checkout"
+        },
+        secondaryButton: {
+          text: "Join Waitlist / Ask a Question",
+          href: "#lead-modal"
+        }
+      }
+    },
     featureBanner: { enabled: false },
   },
 

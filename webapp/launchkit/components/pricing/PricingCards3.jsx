@@ -511,7 +511,7 @@ const calculateSubscriptionPricing = (card) => {
       };
     }
 
-    if (card.billingCycle === "lifetime") {
+    if (card.billingCycle === "lifetime" || card.billingCycle === "one-time") {
       const hasDiscount = card.originalPrice && card.originalPrice > card.price;
 
       return {

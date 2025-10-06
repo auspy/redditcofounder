@@ -14,7 +14,7 @@ export default function Logo({
       href="/"
       className={cn("flex hover:no-underline items-center gap-2", className)}
     >
-      <Image
+      {/* <Image
         className={className}
         // style={{
         //   objectFit: "contain",
@@ -23,8 +23,8 @@ export default function Logo({
         alt={alt}
         width={size}
         height={size}
-      />
-      {!onlyLogo && <div className="text-2xl font-bold ">SupaSidebar</div>}
+      /> */}
+      {!onlyLogo && <div className="text-2xl font-bold ">RedditCoFounder</div>}
       {/* beta text*/}
       {showBeta && <span className="text-sm text-gray-500">Beta</span>}
     </Link>

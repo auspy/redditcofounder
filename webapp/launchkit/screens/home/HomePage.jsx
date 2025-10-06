@@ -71,7 +71,7 @@ export default function HomePage({ config }) {
       )}
 
       {/* Optional: Productivity Loss Section */}
-      {sections.productivityLoss?.enabled && (
+      {sections.productivityLoss?.enabled !== false && (
         <>
           <ProductivityLoss {...sections.productivityLoss.props} />
           <div className={finalSpacing.betweenSections} />
