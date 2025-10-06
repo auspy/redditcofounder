@@ -1,12 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
-  experimental: {
-    outputFileTracingRoot: process.cwd(),
-    outputFileTracingExcludes: {
-      "*": ["swiftapp/**/*", ".next/cache/**/*"],
-    },
-  },
+  outputFileTracingRoot: process.cwd(),
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
@@ -25,7 +20,7 @@ const nextConfig = {
     YEARLY_IN_PRODUCT_ID: process.env.YEARLY_IN_PRODUCT_ID,
   },
   images: {
-    domains: ["images.unsplash.com"],
+    remotePatterns: ["images.unsplash.com"],
   },
   async headers() {
     return [
