@@ -1,0 +1,20 @@
+# Swift app directory - exclude entire macOS app
+swiftapp/
+
+# Next.js cache and build artifacts
+.next/cache/
+.next/trace/
+
+# Development and build artifacts
+*.log
+.DS_Store
+.env*.local
+
+# Git and IDE files
+.git/
+.vscode/
+.idea/
+
+# Test coverage and reports
+coverage/
+*.lcov

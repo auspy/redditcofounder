@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nextra.site)",
+      "Bash(mkdir:*)",
+      "Bash(pnpm build:*)"
+    ],
+    "deny": []
+  }
+}

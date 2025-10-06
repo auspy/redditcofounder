@@ -1,0 +1,422 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 34 100% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 34 100% 50%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  :root {
+    --border: #e5e5e5;
+    --primary: #4338ca;
+    --dark: #151515;
+    --lightRed: #ffd8d8;
+    --toastify-font-family: "Inter", sans-serif !important;
+    --toastify-color-error: var(--primary) !important;
+  }
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    /* font-family: "Inter", sans-serif; */
+    /* @apply text-zinc-800; */
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+  }
+
+  h1 {
+    @apply font-bold;
+    font-size: clamp(42px, 10vw, 64px);
+
+    text-align: center;
+    /* h1 */
+    /* font-family: "Inter"; */
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    /* 111.111% */
+    /* text-transform: capitalize; */
+  }
+
+  h2 {
+    @apply font-bold text-4xl md:text-5xl leading-tight tracking-tight;
+  }
+  h3 {
+    @apply font-bold text-3xl md:text-4xl leading-tight;
+  }
+
+  h4 {
+    @apply font-medium text-base;
+  }
+
+  h5 {
+    @apply font-medium text-sm text-zinc-700;
+  }
+
+  p,
+  li,
+  pre {
+    @apply text-zinc-600 text-base;
+  }
+
+  pre {
+    font-family: "Inter", sans-serif;
+    white-space: pre-wrap;
+  }
+
+  .large {
+    font-size: 18px;
+    line-height: 145%;
+  }
+
+  #logoText {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+a,
+.link {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a:hover,
+.link:hover {
+  text-underline-offset: 2px;
+  text-decoration: underline;
+  /* color: var(--primary);
+  font-weight: 600; */
+}
+
+button,
+.button {
+  /* color: #fff; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.contain {
+  max-width: 1200px;
+  width: 100%;
+  @apply lg:px-0 md:px-6 px-2;
+}
+
+/* Toastify */
+.Toastify__toast {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  @apply lg:px-[120px] md:px-6 px-2;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-delay-1000 {
+  animation-delay: 1.5s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-scroll-slow {
+  animation: scroll 120s linear infinite;
+}
+.animate-scroll-down {
+  animation: scroll-down 120s linear infinite;
+}
+
+/* Focus Loss Graph Animations */
+@keyframes focusLossGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes intensityPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* Focus Loss Graph Specific Styles */
+.focus-loss-graph-container {
+  /* Hardware acceleration for smooth scrolling */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.focus-loss-progress-bar {
+  /* GPU acceleration for smooth width transitions */
+  will-change: width;
+  transform: translateZ(0);
+}
+
+.focus-loss-text-animation {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.focus-loss-intensity-glow {
+  animation: focusLossGlow 2s ease-in-out infinite;
+}
+
+.focus-loss-shimmer {
+  animation: shimmerSlide 2s ease-in-out infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .focus-loss-graph-container {
+    /* Reduce animation complexity on mobile */
+    transform: none;
+  }
+
+  .focus-loss-text-animation {
+    animation-duration: 0.3s;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .focus-loss-graph-container *,
+  .focus-loss-text-animation,
+  .focus-loss-intensity-glow,
+  .focus-loss-shimmer {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .focus-loss-graph-container {
+    --primary-color: #000000;
+    --text-color: #000000;
+    --background-color: #ffffff;
+  }
+}
+
+/* Performance optimizations */
+.focus-loss-performance-optimized {
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+
+  /* Optimize repaints */
+  will-change: transform, opacity;
+
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Custom fade-in animation */
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Loading spinner for CTA button */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Enhanced button hover effects */
+.focus-loss-cta-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+}
+
+.focus-loss-cta-button:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.focus-loss-cta-button:active {
+  transform: translateY(0) translateZ(0);
+}
+
+/* Intensity-based color transitions */
+.intensity-low {
+  color: #ea580c;
+  transition: color 0.5s ease-in-out;
+}
+
+.intensity-medium {
+  color: #ef4444;
+  transition: color 0.5s ease-in-out;
+}
+
+.intensity-high {
+  color: #dc2626;
+  transition: color 0.5s ease-in-out;
+}
+
+.intensity-critical {
+  color: #b91c1c;
+  transition: color 0.5s ease-in-out;
+  animation: intensityPulse 2s ease-in-out infinite;
+}
+
+.intensity-maximum {
+  color: #7f1d1d;
+  font-weight: 800;
+  transition: all 0.5s ease-in-out;
+  animation: intensityPulse 1.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(127, 29, 29, 0.3);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
