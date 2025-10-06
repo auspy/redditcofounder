@@ -1,117 +1,40 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from "@/contexts/auth.context";
 import PostHogDebug from "@/components/debug/PostHogDebug";
 import BannerWrapper from "@/components/BannerWrapper";
-import { cookies, headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SupaSidebar | Arc Sidebar for Mac",
+  title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
   description:
-    "Lightning-fast sidebar for macOS. Access your files, folders, and websites instantly with keyboard shortcuts and smart organization.",
+    "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
   keywords:
-    "sidebar, productivity, macOS, file manager, quick access, keyboard shortcuts, Arc browser, command palette, workflow, organization, mac app, file organizer, instant access",
-  metadataBase: new URL("https://supasidebar.com"),
+    "reddit marketing, reddit growth, reddit traffic, startup marketing, saas marketing, reddit advertising, social media marketing, content marketing, reddit promotion, traffic generation",
+  metadataBase: new URL("https://redditcofounder.com"),
   openGraph: {
-    title: "SupaSidebar | Arc Sidebar for Mac",
+    title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
     description:
-      "Lightning-fast sidebar for macOS. Access your files, folders, and websites instantly with keyboard shortcuts and smart organization.",
+      "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
     type: "website",
-    url: "https://supasidebar.com",
+    url: "https://redditcofounder.com",
     images: ["/opengraph-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SupaSidebar | Arc Sidebar for Mac",
+    title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
     description:
-      "Lightning-fast sidebar for macOS. Access your files, folders, and websites instantly with keyboard shortcuts and smart organization.",
+      "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
     images: ["/opengraph-image.png"],
   },
 };
 
 export default async function RootLayout({ children }) {
-  const googleAnalytics = process.env.NEXT_PUBLIC_GOOGLE_ADD_ID;
-
-  // Read PostHog flags from middleware-set cookie (single source of truth)
-  let bootstrapFlags = {};
-
-  try {
-    const cookieStore = cookies();
-    console.log("🔍 [LAYOUT] Cookie store obtained successfully");
-
-    // Get all cookies for debugging
-    const allCookies = cookieStore.getAll();
-    console.log(
-      "🍪 [LAYOUT] All cookies:",
-      allCookies.map((c) => c.name)
-    );
-
-    const bootstrapCookie = cookieStore.get("ph_bootstrap");
-    console.log("🎯 [LAYOUT] Bootstrap cookie lookup result:", {
-      found: !!bootstrapCookie,
-      value: bootstrapCookie?.value
-        ? `${bootstrapCookie.value.substring(0, 100)}...`
-        : "none",
-    });
-
-    let bootstrapData = null;
-
-    if (bootstrapCookie) {
-      try {
-        bootstrapData = JSON.parse(bootstrapCookie.value);
-        console.log(
-          "📖 [LAYOUT] Successfully parsed PostHog flags from cookie"
-        );
-      } catch (error) {
-        console.error("❌ [LAYOUT] Error parsing bootstrap cookie:", error);
-      }
-    } else {
-      // Try to get from headers if cookie is not available
-      const headerStore = headers();
-      const bootstrapHeader = headerStore.get("x-ph-bootstrap");
-      console.log("🔍 [LAYOUT] Checking headers for bootstrap data:", {
-        found: !!bootstrapHeader,
-        value: bootstrapHeader
-          ? `${bootstrapHeader.substring(0, 100)}...`
-          : "none",
-      });
-
-      if (bootstrapHeader) {
-        try {
-          bootstrapData = JSON.parse(bootstrapHeader);
-          console.log(
-            "📖 [LAYOUT] Successfully parsed PostHog flags from header"
-          );
-        } catch (error) {
-          console.error("❌ [LAYOUT] Error parsing bootstrap header:", error);
-        }
-      } else {
-        console.log("⚠️ [LAYOUT] No PostHog bootstrap cookie or header found");
-      }
-    }
-
-    if (bootstrapData) {
-      bootstrapFlags = bootstrapData.flags || {};
-      console.log(
-        "✅ [LAYOUT] PostHog flags loaded:",
-        Object.keys(bootstrapFlags)
-      );
-    }
-  } catch (error) {
-    // This happens during static generation when cookies() is not available
-    console.log(
-      "📦 [LAYOUT] Static generation mode - no cookies available, error:",
-      error.message
-    );
-  }
+  // const googleAnalytics = process.env.NEXT_PUBLIC_GOOGLE_ADD_ID;
 
   return (
     // <ClerkProvider>
@@ -129,7 +52,7 @@ export default async function RootLayout({ children }) {
       <body className={`${inter.className}  `}>
         <BannerWrapper />
         <AuthProvider>
-          <Providers bootstrapFlags={bootstrapFlags}>
+          <Providers>
             {children}
             {/* 🛠️ PostHog Debug Component - Only shows in development */}
             <PostHogDebug />
