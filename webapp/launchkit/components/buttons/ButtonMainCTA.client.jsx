@@ -15,7 +15,7 @@ import { useDownload } from "@/hooks/useDownload";
 import Link from "next/link";
 import ButtonHowItWorks from "./ButtonHowItWorks";
 import { ArrowRight, Loader2 } from "lucide-react";
-import { useBootstrapFlags } from "@/components/analytics/PostHogProvider";
+// import { useBootstrapFlags } from "@/components/analytics/PostHogProvider";
 import { FEATURE_FLAGS, getCTATextByVariant } from "@/lib/flags/featureFlags";
 import { FreeForeverLink } from "@/components/alerts/MoneyBackGuaranteeAlert";
 
@@ -44,19 +44,12 @@ export default function ButtonMainCTAClient({
   const router = useRouter();
 
   // 🚀 NEW: Get flags from bootstrap context (NO FLICKER!)
-  const flags = useBootstrapFlags();
-  const ctaFlagData = flags[FEATURE_FLAGS.CTA_TEXT_VARIANT] || {};
+  // const flags = useBootstrapFlags();
+  const ctaFlagData =  {};
 
   // Extract variant and payload from flag data
   const currentVariant = ctaFlagData.variant || "control";
   const currentPayload = ctaFlagData.payload || {};
-
-  console.log("🎯 [ButtonMainCTA] Using bootstrap flags:", {
-    variant: currentVariant,
-    payload: currentPayload,
-    flagData: ctaFlagData,
-    allFlags: Object.keys(flags),
-  });
 
   const defaultText = getCTATextByVariant(currentVariant);
 
@@ -72,12 +65,7 @@ export default function ButtonMainCTAClient({
     }
   }, [currentPayload, downloadMethod]);
 
-  const isDownloadAction =
-    downloadMethod === "modal" ||
-    downloadMethod === "direct" ||
-    href === "download" ||
-    href === "/download" ||
-    type === "download_link";
+  const isDownloadAction = false
   const isLoading = isDownloadAction ? isDownloading : isNavigating;
 
   const textis = isLoading ? (
@@ -116,7 +104,7 @@ export default function ButtonMainCTAClient({
       }
     } else {
       // Regular navigation
-      if (as === "link") {
+      if (as === "link" || href ) {
         e.preventDefault();
         setIsNavigating(true);
         router.push(href);

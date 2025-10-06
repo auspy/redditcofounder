@@ -141,7 +141,8 @@ const DesktopNavigation = ({ navigation, router, bootstrap }) => {
               return (
                 <NavigationMenuItem key={index}>
                   <ButtonMainCTAClient
-                    text="Download"
+                    text="Get Started"
+                    href="/#pricing"
                     type="small"
                     location={Locations.HEADER}
                     bootstrap={bootstrap}
@@ -287,7 +288,8 @@ const MobileNavigation = ({ navigation, bootstrap }) => {
               if (item.isDownloadButton) {
                 return (
                   <ButtonMainCTAClient
-                    text="Download"
+                        text="Get Started"
+                    href="/#pricing"
                     key={index}
                     type="small"
                     location={Locations.HEADER}
@@ -430,76 +432,7 @@ export default function Header({ bootstrap = null }) {
 
   const navigation = [
     {
-      label: "Features",
-      href: "#features",
-      // menu: [
-      //   ...featuresData.map((feature) => ({
-      //     icon: feature.icon && (
-      //       <span
-      //         className={cn(
-      //           "inline-flex items-center justify-center w-8 h-8 rounded-md shrink-0",
-      //           "bg-blue-50 text-blue-600"
-      //         )}
-      //       >
-      //         {iconMap[feature.icon] &&
-      //           React.createElement(iconMap[feature.icon], { size: 16 })}
-      //       </span>
-      //     ),
-      //     label: feature.title,
-      //     description: feature.shortDescription,
-      //     href: `/features#${feature.id}`,
-      //     isPro: feature.isPro,
-      //   })),
-      //   {
-      //     isViewAll: true,
-      //     label: "View All Features",
-      //     href: "/features",
-      //   },
-      // ],
-    },
-
-    {
-      label: "Roadmap",
-      // href: "/whats-next",
-      menu: [
-        // {
-        //   icon: <Brain style={{ height: 18 }} className="text-cyan-500" />,
-        //   label: "Challenges",
-        //   description: "Solutions for common focus and attention problems",
-        //   href: "/challenges",
-        // },
-        // {
-        //   icon: <BookOpen style={{ height: 18 }} className="text-indigo-500" />,
-        //   label: "Blog",
-        //   description: "Articles, guides and focus techniques",
-        //   href: "/blog",
-        // },
-        {
-          icon: (
-            <Binoculars style={{ height: 18 }} className="text-purple-500" />
-          ),
-          label: "What's Next?",
-          href: "/whats-next",
-        },
-        {
-          icon: (
-            <Megaphone
-              height={16}
-              style={{ height: 18 }}
-              className="text-primary"
-            />
-          ),
-          label: "What's New?",
-          href: "/changelog",
-        },
-      ],
-    },
-    {
-      label: "Pricing",
-      href: "/#pricing",
-    },
-    {
-      label: "Contact Us",
+      label: "Talk to Founder",
       href: "/contact",
       // menu: [
       //   {

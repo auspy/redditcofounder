@@ -10,12 +10,12 @@ const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
 });
 
 // Create context for bootstrap flags
-const BootstrapFlagsContext = createContext({});
+// const BootstrapFlagsContext = createContext({});
 
 // Export the hook for components to use
-export function useBootstrapFlags() {
-  return useContext(BootstrapFlagsContext);
-}
+// export function useBootstrapFlags() {
+//   return useContext(BootstrapFlagsContext);
+// }
 
 export function PostHogProvider({ children, bootstrapFlags = {} }) {
   useEffect(() => {
@@ -39,10 +39,12 @@ export function PostHogProvider({ children, bootstrapFlags = {} }) {
         },
         // Use localStorage for anonymous user persistence
         persistence: "localStorage",
+        person_profiles: "always",
+        defaults: "2025-05-24",
         // 👈 CRITICAL: Bootstrap data to prevent flicker in A/B tests
-        bootstrap: {
-          featureFlags: bootstrapFlags,
-        },
+        // bootstrap: {
+        //   featureFlags: bootstrapFlags,
+        // },
       });
 
       console.log(
@@ -53,11 +55,11 @@ export function PostHogProvider({ children, bootstrapFlags = {} }) {
   }, []); // Empty dependency array - only run once
 
   return (
-    <BootstrapFlagsContext.Provider value={bootstrapFlags}>
-      <PHProvider client={posthog}>
-        <PostHogPageView />
-        {children}
-      </PHProvider>
-    </BootstrapFlagsContext.Provider>
+    // <BootstrapFlagsContext.Provider value={bootstrapFlags}>
+    <PHProvider client={posthog}>
+      <PostHogPageView />
+      {children}
+    </PHProvider>
+    // </BootstrapFlagsContext.Provider>
   );
 }
