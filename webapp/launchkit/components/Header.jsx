@@ -31,7 +31,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supportEmail } from "@/constants";
 import { useRouter } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import ButtonMainCTAClient from "@/components/buttons/ButtonMainCTA.client";
+import ButtonMainCTAClient, { TalkToFounderButton } from "@/components/buttons/ButtonMainCTA.client";
 import { useAuth } from "@/contexts/auth.context";
 import { trackButtonClick, ButtonActions, Locations } from "@/lib/tracking";
 import {
@@ -136,6 +136,20 @@ const DesktopNavigation = ({ navigation, router, bootstrap }) => {
       <NavigationMenu>
         <NavigationMenuList className="flex items-center gap-5">
           {navigation.map((item, index) => {
+            // For Talk to Founder link
+            if (item.isTalkToFounderButton) {
+              return (
+                <NavigationMenuItem key={index}>
+                  <NavigationMenuLink asChild>
+                    <TalkToFounderButton
+                      variant="link"
+                      text="Talk to Founder"
+                    />
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              );
+            }
+
             // For download button
             if (item.isDownloadButton) {
               return (
@@ -284,6 +298,18 @@ const MobileNavigation = ({ navigation, bootstrap }) => {
         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
           <nav className="flex flex-col gap-4 mt-8">
             {navigation.map((item, index) => {
+              // Talk to Founder link
+              if (item.isTalkToFounderButton) {
+                return (
+                  <TalkToFounderButton
+                    key={index}
+                    variant="link"
+                    text="Talk to Founder"
+                    className="text-left px-2 py-1.5 hover:bg-gray-100 rounded-md w-full"
+                  />
+                );
+              }
+
               // Download button
               if (item.isDownloadButton) {
                 return (
@@ -432,27 +458,7 @@ export default function Header({ bootstrap = null }) {
 
   const navigation = [
     {
-      label: "Talk to Founder",
-      href: "/contact",
-      // menu: [
-      //   {
-      //     icon: <Mail style={{ height: 18 }} className="text-blue-600" />,
-      //     label: "Contact Us",
-      //     href: "/contact",
-      //   },
-      //   {
-      //     icon: (
-      //       <MessageCircle style={{ height: 18 }} className="text-indigo-500" />
-      //     ),
-      //     label: "Discord",
-      //     href: process.env.NEXT_PUBLIC_DISCORD_URL,
-      //   },
-      //   {
-      //     icon: <Twitter style={{ height: 18 }} className="text-sky-500" />,
-      //     label: "Twitter",
-      //     href: "https://twitter.com/focusmoapp",
-      //   },
-      // ],
+      isTalkToFounderButton: true,
     },
     // {},
     // {

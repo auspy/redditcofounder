@@ -20,6 +20,45 @@ import { FEATURE_FLAGS, getCTATextByVariant } from "@/lib/flags/featureFlags";
 import { FreeForeverLink } from "@/components/alerts/MoneyBackGuaranteeAlert";
 import { LightningBoltIcon } from "@radix-ui/react-icons";
 
+// Utility function to open Cal.com in new tab
+export const talkToFounder = () => {
+  window.open("https://cal.com/kshetez", "_blank");
+};
+
+// Reusable Talk to Founder Button Component
+export const TalkToFounderButton = ({
+  className = "",
+  text = "Book Intro Call",
+  size = "md", // sm, md, lg
+  variant = "button" // "button" | "link"
+}) => {
+  const sizeClasses = {
+    sm: "px-3 py-2 text-sm",
+    md: "px-4 py-3 text-sm",
+    lg: "px-6 py-4 text-base"
+  };
+
+  if (variant === "link") {
+    return (
+      <button
+        onClick={talkToFounder}
+        className={`text-sm font-medium text-foreground hover:text-blue-600 transition-colors duration-150 ${className}`}
+      >
+        {text}
+      </button>
+    );
+  }
+
+  return (
+    <button
+      onClick={talkToFounder}
+      className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition-all font-medium ${sizeClasses[size]} ${className}`}
+    >
+      {text}
+    </button>
+  );
+};
+
 export default function ButtonMainCTAClient({
   align = "center",
   type = "small", // "small" | "large" | "download_link"
@@ -286,14 +325,7 @@ export default function ButtonMainCTAClient({
           </svg>
         </FancyButton>
         {/* <ButtonHowItWorks /> */}
-        <button
-onClick={() => {
-  router.push("/#pricing");
-}}
-        className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition-all px-4 py-3 text-sm font-medium ${className}`}
-      >
-        Talk to Founder
-      </button>
+        <TalkToFounderButton className={className} text="Book Intro Call" />
         
       </div>
       <div className={`flex items-${align} flex-col gap-1 mt-0.5`}>

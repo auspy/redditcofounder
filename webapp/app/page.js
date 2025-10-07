@@ -109,7 +109,7 @@ const homepageConfig = {
     // Currently disabled sections (commented out in original)
     focusLossProblem: { enabled: false },
     productivityLoss: { enabled: false },
-    testimonialSingle: { enabled: false },
+    testimonialSingle: { enabled: true },
     impactSection: { enabled: false },
     pricing: {
       enabled: true,
@@ -234,7 +234,14 @@ const homepageConfig = {
         ]
       }
     },
-    testimonials: { enabled: false },
+    testimonials: {
+      enabled: false,
+      props: {
+        variant: "multicolumn",
+        title: "What Our Clients Say",
+        description: "See how Reddit CoFounder has helped businesses grow their organic reach"
+      }
+    },
     // guarantee: {
     //   enabled: true,
     //   props: {
