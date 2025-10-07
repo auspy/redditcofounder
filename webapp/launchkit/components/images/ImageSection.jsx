@@ -35,7 +35,9 @@ export default function ImageSection({
   variant = "multicolumn", // "multicolumn" | "grid"
   cardVariant = "full", // "full" | "imageOnly"
   limit = null, // Limit number of images shown
-  maxViews = null // Filter by maximum totalViewsNumeric value
+  maxViews = null, // Filter by maximum totalViewsNumeric value
+  viewMore = null, // { text: "View All Results", href: "/recent-works" }
+  showHeading = true // Show/hide the internal SectionHeading
 }) {
   const columnRefs = [useRef(null), useRef(null), useRef(null)];
 
@@ -120,19 +122,44 @@ export default function ImageSection({
   );
 
   return (
-    <section className="wrapper w-full">
-      <div className=" ">
-        <div className="flex items-center  w-full flex-col">
-          <SectionHeading
-            title={title}
-            badge={badge}
-            description={description}
-            headingSize={headingSize}
-            containerClassName={containerClassName}
-          />
-        </div>
+    <section className={showHeading ? "wrapper w-full" : "w-full"}>
+      <div className={showHeading ? " " : ""}>
+        {showHeading && (
+          <div className="flex items-center  w-full flex-col">
+            <SectionHeading
+              title={title}
+              badge={badge}
+              description={description}
+              headingSize={headingSize}
+              containerClassName={containerClassName}
+            />
+          </div>
+        )}
 
         {variant === "multicolumn" ? renderMultiColumnVariant() : renderGridVariant()}
+
+        {viewMore && (
+          <div className="flex justify-center mt-12">
+            <a
+              href={viewMore.href}
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200"
+            >
+              {viewMore.text || "View More"}
+              <svg
+                className="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

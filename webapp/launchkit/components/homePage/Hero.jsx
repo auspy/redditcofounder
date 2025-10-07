@@ -143,7 +143,7 @@ export default function Hero({
       >
         <div
           className={cn(
-            "flex flex-col lg:w-[54vw]",
+            "flex flex-col lg:w-[74vw]",
             align === "center"
               ? "items-center "
               : "items-start max-w-xl lg:w-full"

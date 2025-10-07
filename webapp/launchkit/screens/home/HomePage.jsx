@@ -22,7 +22,7 @@ export default function HomePage({ config }) {
   const defaultSpacing = {
     afterHero: "mb-24 md:mb-48 lg:mb-64",
     afterFeatureBanner: "mb-24 md:mb-48 lg:mb-64",
-    afterFeatureList: "mb-12 md:mb-24 lg:mb-32",
+    afterFeatureList: "mb-12 md:mb-24 lg:mb-64",
     afterImpact: "mb-12 md:mb-24 lg:mb-32",
     afterTestimonials: "mb-24 md:mb-48 lg:mb-64",
     betweenSections: "mb-16 md:mb-24 lg:mb-32",

@@ -281,9 +281,9 @@ export default function ButtonMainCTAClient({
       className={`flex flex-col items-${align} justify-${align} gap-2 w-full`}
     >
       <div className={`flex items-${align} flex-col gap-1 mt-0.5`}>
-        <p className="text-gray-600 w-fit text-sm font-regular p-0 h-fit">
+        {/* <p className="text-gray-600 w-fit text-sm font-regular p-0 h-fit">
           50% Discount for First 5 Clients
-        </p>
+        </p> */}
       </div>
       <div className="flex flex-wrap items-center sm:justify-center gap-4">
         <FancyButton
@@ -336,7 +336,7 @@ export default function ButtonMainCTAClient({
             router.push("/#pricing");
           }}
         >
-          50k+ views or full refund
+          50% Discount for First 5 Clients
           <ArrowRight className="w-3 h-3 ml-2" />
         </Button>
       </div>

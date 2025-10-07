@@ -71,7 +71,7 @@ const creativePackFeatures = [
 const homepageConfig = {
   hero: {
     preTitle: "Reddit Marketing on AutoPilot",
-    title: <><span className="text-primary">50K+ Organic Views</span> in <br className="hidden md:block" /> 7 days Guaranteed</>,
+    title: <><span className="text-primary">50K+ Organic Views</span> in <br className="hidden md:block" /> 7 days or Full Refund</>,
     description: (
       <>
         Get organic traffic to your product through Reddit without lifting a finger, while you sleep. You build the product. I bring the traffic.
@@ -116,13 +116,17 @@ const homepageConfig = {
       enabled: true,
       props: {
         images: realRedditResultsData,
-        title: <> <span className="text-primary">2.2 Million+ Organic Views</span> <br className="hidden md:block" /> in just 27 Posts</>,
+        title: <> 2.2 Million+ Organic Views</>,
         description: "It's not a lucky break. It's a strategic approach to Reddit marketing.",
         badge: "Real Results",
         variant: "multicolumn",
         cardVariant: "imageOnly",
-        limit: 15,
-        maxViews: 250000
+        limit: 7,
+        maxViews: 250000,
+        viewMore: {
+          text: "View All Results",
+          href: "/recent-works"
+        }
       }
     },
     pricing: {

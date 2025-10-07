@@ -63,10 +63,10 @@ export default function HowItWorksSection({
             >
               {/* Beautiful Step Number */}
               <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  {step.step || index + 1}
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <span className="text-2xl font-bold">{step.step || index + 1}</span>
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl -z-10 blur-sm"></div>
+                <div className="absolute -inset-1 bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-2xl -z-10 blur-sm"></div>
               </div>
 
               {/* Step Title */}

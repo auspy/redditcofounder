@@ -9,7 +9,7 @@ function CTASection() {
     <>
       <section className="max-w-[90%] lg:max-w-7xl w-full  rounded-3xl mx-auto bg-primary/95 py-24 px-4 border-t border-primary/20">
         <div className=" contain flex flex-col items-center mx-auto text-center space-y-6">
-          <Logo size={100} onlyLogo={true} />
+          {/* <Logo size={100} onlyLogo={true} /> */}
           <h2
             className="text-3xl md:text-5xl tracking-tight leading-[1.10] font-bold max-w-xl mx-auto text-white"
             style={{
