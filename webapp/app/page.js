@@ -121,7 +121,8 @@ const homepageConfig = {
         badge: "Real Results",
         variant: "multicolumn",
         cardVariant: "imageOnly",
-        limit: 15
+        limit: 15,
+        maxViews: 250000
       }
     },
     pricing: {
@@ -218,12 +219,12 @@ const homepageConfig = {
 
     // Enabled sections with default props
     // featureBanner: { enabled: true },
-    featureList: {
+    howItWorks: {
       enabled: true,
       props: {
         title: "How It Works",
         subtitle: "No bans. No guesswork. You don't lift a finger.",
-        features: [
+        steps: [
           {
             step: "1",
             title: "You share the site + 2 lines on the product",
@@ -236,17 +237,13 @@ const homepageConfig = {
           },
           {
             step: "3",
-            title: "I publish + handle comments for 7 days",
-            description: "Active engagement and community management"
-          },
-          {
-            step: "4",
-            title: "You get a report (impressions, upvotes, comments, clicks, next steps)",
+            title: "You get a report (impressions, upvotes, comments, clicks)",
             description: "Detailed analytics and recommendations for continued growth"
           }
         ]
       }
     },
+    featureList: { enabled: false },
     testimonials: {
       enabled: false,
       props: {

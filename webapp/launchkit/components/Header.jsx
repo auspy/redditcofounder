@@ -458,6 +458,10 @@ export default function Header({ bootstrap = null }) {
 
   const navigation = [
     {
+      label: "How it works",
+      href: "/#how-it-works",
+    },
+    {
       isTalkToFounderButton: true,
     },
     // {},

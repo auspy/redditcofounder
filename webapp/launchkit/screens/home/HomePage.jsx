@@ -13,6 +13,7 @@ import PricingSection from "@/components/PricingSection";
 import ProductivityLoss from "@/components/ProductivityLoss";
 import TestimonialSingle from "@/components/testimonials/TestimonialSingle";
 import ImageSection from "@/components/images/ImageSection";
+import HowItWorksSection from "@/components/howItWorks/HowItWorksSection";
 
 export default function HomePage({ config }) {
   const { hero, sections = {}, spacing = {}, siteConfig } = config;
@@ -68,6 +69,14 @@ export default function HomePage({ config }) {
         <>
           <FeatureBanner {...sections.featureBanner?.props} />
           <div className={finalSpacing.afterFeatureBanner} />
+        </>
+      )}
+
+      {/* How It Works Section */}
+      {sections.howItWorks?.enabled && (
+        <>
+          <HowItWorksSection {...sections.howItWorks.props} />
+          <div className={finalSpacing.afterFeatureList} />
         </>
       )}
 

@@ -34,12 +34,21 @@ export default function ImageSection({
   containerClassName = null,
   variant = "multicolumn", // "multicolumn" | "grid"
   cardVariant = "full", // "full" | "imageOnly"
-  limit = null // Limit number of images shown
+  limit = null, // Limit number of images shown
+  maxViews = null // Filter by maximum totalViewsNumeric value
 }) {
   const columnRefs = [useRef(null), useRef(null), useRef(null)];
 
+  // Apply filters
+  let filteredImages = images;
+
+  // Filter by max views if specified
+  if (maxViews) {
+    filteredImages = filteredImages.filter(image => image.totalViewsNumeric <= maxViews);
+  }
+
   // Apply limit if specified
-  const displayImages = limit ? images.slice(0, limit) : images;
+  const displayImages = limit ? filteredImages.slice(0, limit) : filteredImages;
 
   useEffect(() => {
     if (variant !== "multicolumn") return;
