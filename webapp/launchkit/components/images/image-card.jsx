@@ -8,12 +8,19 @@ export function ImageCard({
   stats = null,
   imageAlt = null,
   className = null,
-  variant = "full" // "full" | "imageOnly"
+  variant = "full", // "full" | "imageOnly"
+  totalViews = null // For top bar overlay in imageOnly variant
 }) {
   if (variant === "imageOnly") {
     return (
       <div className={cn("relative rounded-xl overflow-hidden", className)}>
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden break-inside-avoid shadow-sm hover:shadow-md transition-shadow duration-200">
+          {totalViews && (
+            <div className="bg-white border-b border-gray-200 px-4 py-2 flex items-center space-x-2">
+              <span className="text-gray-600">👁</span>
+              <span className="font-semibold text-sm text-gray-800">{totalViews} views</span>
+            </div>
+          )}
           {imageUrl && (
             <div className="relative w-full h-auto bg-gray-100">
               <Image

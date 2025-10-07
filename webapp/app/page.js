@@ -116,8 +116,8 @@ const homepageConfig = {
       enabled: true,
       props: {
         images: realRedditResultsData,
-        title: "Proven Reddit Results",
-        description: "See the real traffic and engagement our strategic campaigns deliver",
+        title: <> <span className="text-primary">2.2 Million+ Organic Views</span> <br className="hidden md:block" /> in just 27 Posts</>,
+        description: "It's not a lucky break. It's a strategic approach to Reddit marketing.",
         badge: "Real Results",
         variant: "multicolumn",
         cardVariant: "imageOnly",
