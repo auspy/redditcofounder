@@ -1,4 +1,5 @@
 import { HomePage } from "@/screens/home";
+import { realRedditResultsData } from "@/components/images/reddit-results-data";
 
 export const revalidate = false;
 
@@ -111,6 +112,18 @@ const homepageConfig = {
     productivityLoss: { enabled: false },
     testimonialSingle: { enabled: true },
     impactSection: { enabled: false },
+    redditResults: {
+      enabled: true,
+      props: {
+        images: realRedditResultsData,
+        title: "Proven Reddit Results",
+        description: "See the real traffic and engagement our strategic campaigns deliver",
+        badge: "Real Results",
+        variant: "multicolumn",
+        cardVariant: "imageOnly",
+        limit: 15
+      }
+    },
     pricing: {
       enabled: true,
       props: {
@@ -273,6 +286,7 @@ const homepageConfig = {
   spacing: {
     afterHero: "mb-24 md:mb-48 lg:mb-64",
     afterFeatureBanner: "mb-24 md:mb-48 lg:mb-64",
+    afterRedditResults: "mb-12 md:mb-24 lg:mb-32",
     afterFeatureList: "mb-12 md:mb-24 lg:mb-32",
     afterImpact: "mb-12 md:mb-24 lg:mb-32",
     afterTestimonials: "mb-24 md:mb-48 lg:mb-64",

@@ -12,6 +12,7 @@ import FAQ from "@/components/homePage/FAQ";
 import PricingSection from "@/components/PricingSection";
 import ProductivityLoss from "@/components/ProductivityLoss";
 import TestimonialSingle from "@/components/testimonials/TestimonialSingle";
+import ImageSection from "@/components/images/ImageSection";
 
 export default function HomePage({ config }) {
   const { hero, sections = {}, spacing = {}, siteConfig } = config;
@@ -53,6 +54,14 @@ export default function HomePage({ config }) {
       )}
 
       <div className={finalSpacing.afterHero} />
+
+      {/* Reddit Results Section */}
+      {sections.redditResults?.enabled && (
+        <>
+          <ImageSection {...sections.redditResults.props} />
+          <div className={finalSpacing.afterRedditResults} />
+        </>
+      )}
 
       {/* Feature Banner */}
       {sections.featureBanner?.enabled !== false && (

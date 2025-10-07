@@ -4,7 +4,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Logo({
-  size = 32,
+  size = 220,
   onlyLogo = false,
   className = "",
   showBeta = false,
@@ -14,17 +14,17 @@ export default function Logo({
       href="/"
       className={cn("flex hover:no-underline items-center gap-2", className)}
     >
-      {/* <Image
+      <Image
         className={className}
         // style={{
         //   objectFit: "contain",
         // }}
-        src="/logo.png"
+        src="/logo_big.png"
         alt={alt}
         width={size}
         height={size}
-      /> */}
-      {!onlyLogo && <div className="text-2xl font-bold ">RedditCoFounder</div>}
+      />
+      {/* {!onlyLogo && <div className="text-2xl font-bold ">RedditCoFounder</div>} */}
       {/* beta text*/}
       {/* {showBeta && <span className="text-sm text-gray-500">(5 Slots)</span>} */}
     </Link>
