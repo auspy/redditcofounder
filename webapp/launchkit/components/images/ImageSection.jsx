@@ -78,20 +78,29 @@ export default function ImageSection({
     };
   }, [variant, displayImages]);
 
-  const renderMultiColumnVariant = () => (
-    <div className="columns-1 md:columns-2 gap-6 w-full">
-      {displayImages.map((image, index) => (
-        <div
-          key={index}
-          id={`image-item-${index}`}
-          ref={columnRefs[index % 3]}
-          className="mb-6 break-inside-avoid"
-        >
-          <ImageCard {...image} variant={cardVariant} />
+  const renderMultiColumnVariant = () => {
+    const leftColumnImages = displayImages.filter((_, index) => index % 2 === 0);
+    const rightColumnImages = displayImages.filter((_, index) => index % 2 === 1);
+
+    return (
+      <div className="flex flex-col md:flex-row gap-6 w-full">
+        <div className="flex-1 space-y-6">
+          {leftColumnImages.map((image, index) => (
+            <div key={index * 2} className="w-full">
+              <ImageCard {...image} variant={cardVariant} />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  );
+        <div className="flex-1 space-y-6">
+          {rightColumnImages.map((image, index) => (
+            <div key={index * 2 + 1} className="w-full">
+              <ImageCard {...image} variant={cardVariant} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   const renderGridVariant = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
