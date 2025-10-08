@@ -3,16 +3,16 @@ const PrivacyPolicy = () => {
     <div className="max-w-4xl mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
       <p className="text-gray-600 mb-8">
-        <strong>Effective Date:</strong> August 3, 2025
+        <strong>Effective Date:</strong> October 8, 2025
       </p>
 
       <div className="space-y-8">
         <section>
           <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
           <p className="text-gray-700">
-            Welcome to SupaSidebar! Your privacy is important to us, and this
+            Welcome to Reddit CoFounder! Your privacy is important to us, and this
             Privacy Policy explains how we collect, use, and protect your
-            information when you use our macOS application and website.
+            information when you use our Reddit marketing services and website.
           </p>
         </section>
 
@@ -21,24 +21,29 @@ const PrivacyPolicy = () => {
             2. Information We Collect
           </h2>
           <p className="text-gray-700 mb-4">
-            SupaSidebar is designed with privacy in mind. We collect minimal
+            Reddit CoFounder is designed with privacy in mind. We collect minimal
             information to provide and improve our services:
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
-              <strong>Email Address:</strong> When you purchase a license or
-              contact support, we collect your email address for license
-              management, authentication, and communication purposes.
+              <strong>Website Analytics:</strong> We collect anonymous usage data
+              through PostHog to understand how visitors interact with our website
+              and improve the user experience.
             </li>
             <li>
-              <strong>License Information:</strong> We store license keys,
-              activation status, and device associations to manage your
-              SupaSidebar license and prevent unauthorized use.
+              <strong>Consultation Information:</strong> During consultation calls,
+              you provide us with website details, product information, and target
+              audience data necessary to deliver our Reddit marketing services.
             </li>
             <li>
-              <strong>Website Cookies:</strong> Our website uses cookies to
-              maintain your session and remember preferences for the licensing
-              and download system.
+              <strong>Payment Information:</strong> Payment processing is handled
+              by third-party providers. We do not store credit card or payment
+              information on our servers.
+            </li>
+            <li>
+              <strong>Communication Records:</strong> We may keep records of our
+              email communications and consultation calls for service delivery
+              and quality purposes.
             </li>
           </ul>
         </section>
@@ -52,26 +57,27 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
-              <strong>License Management:</strong> To validate licenses, manage
-              device activations, and ensure compliance with licensing terms.
+              <strong>Service Delivery:</strong> To create and execute Reddit
+              marketing campaigns, analyze performance, and provide detailed
+              reports to clients.
             </li>
             <li>
-              <strong>Product Improvement:</strong> To analyze usage patterns,
-              understand user behavior, and improve SupaSidebar's features and
-              performance.
+              <strong>Website Improvement:</strong> To analyze visitor patterns,
+              understand user behavior, and improve our website's performance
+              and user experience.
             </li>
             <li>
-              <strong>Customer Support:</strong> To provide technical support
-              and respond to your inquiries about SupaSidebar.
+              <strong>Customer Support:</strong> To provide support and respond
+              to your inquiries about our Reddit marketing services.
             </li>
             <li>
-              <strong>Optional Communications:</strong> To send you important
-              updates about SupaSidebar, new features, or significant changes to
-              our service (you can opt out at any time).
+              <strong>Campaign Optimization:</strong> To understand your product
+              and target audience for creating effective Reddit content and
+              targeting appropriate communities.
             </li>
             <li>
-              <strong>Authentication:</strong> To verify your identity for
-              license downloads and management through Firebase Auth.
+              <strong>Communication:</strong> To coordinate service delivery,
+              provide updates, and deliver campaign reports via email or calls.
             </li>
           </ul>
         </section>
@@ -85,17 +91,17 @@ const PrivacyPolicy = () => {
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
-              <strong>Contractual Necessity:</strong> To provide our services,
-              manage your account, and fulfill our obligations under our terms
+              <strong>Contractual Necessity:</strong> To provide our Reddit
+              marketing services and fulfill our obligations under our terms
               of service.
             </li>
             <li>
-              <strong>Legitimate Interests:</strong> To improve our products,
-              analyze usage patterns, and enhance user experience.
+              <strong>Legitimate Interests:</strong> To improve our website,
+              analyze usage patterns, and enhance service delivery.
             </li>
             <li>
               <strong>Consent:</strong> Where required by law, such as for
-              certain marketing communications.
+              storing consultation information and communication records.
             </li>
           </ul>
         </section>
@@ -105,18 +111,24 @@ const PrivacyPolicy = () => {
             5. Data Sharing and Third Parties
           </h2>
           <p className="text-gray-700 mb-4">
-            We use only essential third-party services to provide SupaSidebar:
+            We use only essential third-party services to provide Reddit CoFounder:
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
-              <strong>PostHog:</strong> For privacy-focused analytics and user
-              behavior analysis. Data is anonymized and used solely for
-              improving SupaSidebar's features and performance.
+              <strong>PostHog:</strong> For privacy-focused website analytics.
+              Data is anonymized and used solely for improving our website's
+              performance and user experience.
             </li>
             <li>
-              <strong>Firebase Auth:</strong> For secure authentication and
-              license management. Google processes authentication data according
-              to their privacy policy and industry security standards.
+              <strong>Payment Processors:</strong> Third-party payment providers
+              handle all payment processing. We do not store or process payment
+              information directly.
+            </li>
+            <li>
+              <strong>Additional Services:</strong> We may use hosting (e.g., Vercel),
+              email providers, scheduling tools, and file storage (e.g., Google Drive)
+              to deliver our services. Data may be transferred internationally with
+              appropriate safeguards.
             </li>
           </ul>
           <p className="text-gray-700 mt-4">
@@ -133,30 +145,29 @@ const PrivacyPolicy = () => {
             6. Data Storage and Retention
           </h2>
           <p className="text-gray-700 mb-4">
-            SupaSidebar prioritizes local storage and minimal cloud data
-            retention:
+            Reddit CoFounder prioritizes minimal data storage and clear retention policies:
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>
-              <strong>Local App Data:</strong> All your SupaSidebar data (saved
-              apps, websites, folders, preferences, and shortcuts) is stored
-              locally on your Mac using Core Data with iCloud sync. We do not
-              have access to this personal data.
+              <strong>Consultation Information:</strong> Product and business
+              information provided during consultation calls is retained only
+              for the duration of service delivery and up to 30 days afterward
+              for support purposes.
             </li>
             <li>
-              <strong>License Information:</strong> License keys and activation
-              status are stored securely for as long as your license is active,
-              plus reasonable time for support purposes.
+              <strong>Campaign Records:</strong> Campaign performance data and
+              reports are retained for up to 1 year for reference and potential
+              future campaigns.
             </li>
             <li>
-              <strong>Analytics Data:</strong> Anonymized usage data is retained
-              by PostHog for up to 2 years for analysis and product improvement
-              purposes.
+              <strong>Analytics Data:</strong> Anonymized website usage data is
+              retained by PostHog for up to 1 year for analysis and website
+              improvement purposes.
             </li>
             <li>
-              <strong>Email Communications:</strong> Email addresses are
-              retained for license management and optional communications until
-              you request deletion or opt out.
+              <strong>Communication Records:</strong> Email communications and
+              call notes are retained for up to 1 year for service quality and
+              support purposes.
             </li>
           </ul>
         </section>
@@ -177,7 +188,7 @@ const PrivacyPolicy = () => {
             </li>
             <li>
               <strong>Deletion:</strong> Request deletion of your personal data,
-              subject to legal obligations.
+              subject to legal and contractual obligations.
             </li>
             <li>
               <strong>Portability:</strong> Request a copy of your data in a
@@ -188,6 +199,10 @@ const PrivacyPolicy = () => {
               data for legitimate interests.
             </li>
           </ul>
+          <p className="text-gray-700 mt-4">
+            EU/UK residents may lodge a complaint with their local supervisory authority.
+            Contact us first and we'll resolve promptly.
+          </p>
         </section>
 
         <section>
@@ -216,14 +231,14 @@ const PrivacyPolicy = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
           <p className="text-gray-700">
-            SupaSidebar is developed and maintained by an independent developer.
+            Reddit CoFounder is operated by an independent service provider.
             If you have any questions about this Privacy Policy or wish to
             exercise your rights, please contact us at{" "}
             <a
-              href="mailto:admin@supasidebar.com"
+              href="mailto:admin@redditcofounder.com"
               className="text-blue-600 hover:text-blue-800"
             >
-              admin@supasidebar.com
+              admin@redditcofounder.com
             </a>
             .
           </p>

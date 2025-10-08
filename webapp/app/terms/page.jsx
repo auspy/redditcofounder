@@ -7,26 +7,32 @@ export default function TermsAndConditions() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
           <p className="text-gray-700">
-            By downloading, installing, or using SupaSidebar ("the Software"),
+            By purchasing or using Reddit CoFounder services ("the Service"),
             you agree to be bound by these Terms and Conditions. If you disagree
             with any part of these terms, you do not have permission to use the
-            Software.
+            Service.
           </p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">2. License Terms</h2>
+          <h2 className="text-2xl font-semibold mb-4">2. Service Offerings</h2>
           <div className="space-y-4">
             <div>
-              <h3 className="text-xl font-medium mb-2">2.1 Trial Period</h3>
+              <h3 className="text-xl font-medium mb-2">2.1 7-Day Reddit Growth Sprint</h3>
               <ul className="list-disc pl-5 text-gray-700">
-                <li>The Software offers a 7-day full-feature trial period</li>
-                <li>No credit card information is required for the trial</li>
-                <li>Trial begins upon first launch of the Software</li>
-                <li>
-                  After trial, software reverts to Free tier with limited
-                  features
-                </li>
+                <li>One-time service priced at $350 (pilot pricing)</li>
+                <li>7 days of active engagement and comment management</li>
+                <li>We'll run up to 5 posts over 7 days to hit 50k+ <strong>impressions</strong></li>
+                <li>Detailed report with screenshots and analytics</li>
+                <li>50k+ <strong>impressions</strong> guaranteed or full refund</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-2">2.2 Growth Month (Custom)</h3>
+              <ul className="list-disc pl-5 text-gray-700">
+                <li>Custom monthly program typically targeting 150k–300k Reddit <strong>impressions</strong></li>
+                <li>Includes posting, engagement, outreach, and weekly reporting</li>
+                <li>Starts at $2,000/mo (scope dependent)</li>
               </ul>
             </div>
           </div>
@@ -34,62 +40,33 @@ export default function TermsAndConditions() {
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">
-            3. Privacy and Data Collection
+            3. Client Obligations
           </h2>
           <div className="space-y-4">
             <div>
-              <h3 className="text-xl font-medium mb-2">3.1 Data Storage</h3>
+              <h3 className="text-xl font-medium mb-2">3.1 Information Provision</h3>
               <ul className="list-disc pl-5 text-gray-700">
-                <li>All user data is stored locally on your device</li>
-                <li>No personal information is collected or transmitted</li>
-                <li>No account creation is required</li>
+                <li>Client must provide website and product details during consultation calls</li>
+                <li>Client must provide accurate information about target audience</li>
+                <li>Client must respond to clarification requests in a timely manner</li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2">
-                3.2 Analytics and Usage Data
+                3.2 Data Collection and Privacy
               </h3>
               <ul className="list-disc pl-5 text-gray-700">
                 <li>
-                  We collect basic usage analytics identified by a unique UUID
-                  for your device through PostHog to improve the app
+                  We collect basic usage analytics through PostHog to improve the website
                 </li>
                 <li>
-                  This includes general app usage patterns, feature adoption,
-                  and performance metrics
+                  All analytics data is anonymous and aggregated
                 </li>
                 <li>
-                  We collect email addresses and link them with account and
-                  device IDs solely for in-app analytics and usage statistics
+                  Client information is collected via consultation calls only
                 </li>
                 <li>
-                  Email data is used only to understand user behavior patterns
-                  and improve the app experience - no marketing or external
-                  sharing
-                </li>
-                <li>
-                  No session content or other personal information is collected
-                </li>
-                <li>
-                  You can opt out of analytics collection in the app settings
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-2">
-                3.3 System Integration
-              </h3>
-              <ul className="list-disc pl-5 text-gray-700">
-                <li>
-                  The Software integrates with system-level Do Not Disturb
-                  features
-                </li>
-                <li>
-                  Window position preferences are stored in system defaults
-                </li>
-                <li>
-                  No external data transmission occurs during normal operation
-                  except for optional analytics
+                  We store necessary personal data (e.g., contact details, call notes, campaign assets) under Contractual Necessity/Legitimate Interests to deliver services. We don't sell your data.
                 </li>
               </ul>
             </div>
@@ -99,56 +76,78 @@ export default function TermsAndConditions() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">4. Refund Policy</h2>
           <div className="space-y-4">
-            <p className="text-gray-700">
-              We offer a 30-day money-back guarantee. If you're not completely
-              satisfied with your purchase, contact our support team within 30
-              days for a full refund.
-            </p>
-            <p className="text-gray-700">
-              Refunds beyond the 14-day period are provided at the sole
-              discretion of SupaSidebar and on a case-by-case basis. SupaSidebar
-              may refuse a refund request if we find evidence of fraud, refund
-              abuse, or other manipulative behaviour.
-            </p>
-            <p className="text-gray-700">
-              This does not affect your rights as a Consumer in relation to
-              Products which are not as described, faulty or not fit for
-              purpose.
-            </p>
-            <ul className="list-disc pl-5 text-gray-700">
-              <li>All refund requests will result in license deactivation</li>
-              <li>Contact SupaSidebar support for refund processing</li>
-            </ul>
+            <div>
+              <h3 className="text-xl font-medium mb-2">4.1 Reddit Growth Sprint Guarantee</h3>
+              <p className="text-gray-700">
+                We guarantee 50,000+ Reddit post impressions within 7 days of the first campaign post going live.
+                "Impressions" means the post view count shown in Reddit's native analytics.
+              </p>
+              <p className="text-gray-700">
+                The 7-day measurement window begins when the first campaign post goes live.
+                If a post is removed by moderators or affected by subreddit policy actions,
+                we may reallocate to alternative communities or extend the window to complete delivery.
+              </p>
+              <p className="text-gray-700">
+                If the target isn't reached, we'll either (a) continue posting for up to 7 additional days,
+                or (b) issue a full refund, at the client's choice.
+              </p>
+              <p className="text-gray-700 mb-2">
+                <strong>Exclusions:</strong> posts removed by moderators; categories disallowed by Reddit;
+                client delays or failure to provide required assets/access; changes requested by client that
+                materially reduce reach. We'll provide URL + screenshot proof for all posts and impression counts.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-2">4.2 Growth Month (Custom)</h3>
+              <p className="text-gray-700">
+                Custom monthly plans are discussed on a case-by-case basis.
+                Refund terms will be agreed upon during initial consultation.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-medium mb-2">4.3 General Refund Terms</h3>
+              <p className="text-gray-700">
+                Refunds are processed via admin@redditcofounder.com within 7–10 business days once eligibility is confirmed.
+                We don't refuse valid guarantee refunds.
+              </p>
+              <ul className="list-disc pl-5 text-gray-700">
+                <li>Refunds may be refused in cases of fraud or abuse</li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">5. Restrictions</h2>
+          <h2 className="text-2xl font-semibold mb-4">5. Service Restrictions</h2>
           <p className="text-gray-700 mb-2">You may not:</p>
           <ul className="list-disc pl-5 text-gray-700">
-            <li>Modify, reverse engineer, or decompile the Software</li>
-            <li>Remove any copyright or proprietary notices</li>
-            <li>Transfer your license to another party</li>
-            <li>Use the Software for illegal purposes</li>
-            <li>Attempt to bypass license validation</li>
+            <li>Use the service for illegal, harmful, or unethical purposes</li>
+            <li>Provide false or misleading information about your product</li>
+            <li>Request content that violates Reddit's terms of service</li>
+            <li>Resell or redistribute our services without permission</li>
+            <li>Interfere with our ability to deliver services to other clients</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">
-            6. Updates and Maintenance
+            6. Service Delivery and Communication
           </h2>
           <ul className="list-disc pl-5 text-gray-700">
-            <li>Software updates are provided via Sparkle framework</li>
-            <li>Updates are optional but recommended</li>
-            <li>Technical support is provided for the current version only</li>
-            <li>Personal and Team licenses receive 1 year of free updates</li>
-            <li>Believer licenses receive lifetime free updates</li>
-            <li>
-              After the update period expires, you can continue using your
-              current version forever or optionally renew for continued updates
-            </li>
-            <li>Feature availability may vary based on license tier</li>
+            <li>Services begin within 48 hours of payment and consultation completion</li>
+            <li>Campaign updates are provided as posts go live</li>
+            <li>Final reports are delivered within 48 hours of campaign completion</li>
+            <li>All communication occurs via email or scheduled calls</li>
+            <li>Response time for client inquiries is typically within 24 hours</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">6A. Accounts, Content & Compliance</h2>
+          <ul className="list-disc pl-5 text-gray-700">
+            <li>Client warrants they own or are authorized to use all content, trademarks, and assets supplied to us, and grants us a limited license to use them solely to deliver the Service.</li>
+            <li>When we operate via client-owned Reddit accounts, the client remains responsible for the account's standing and compliance with Reddit policies and community rules.</li>
+            <li>We do not guarantee sales, sign-ups, or conversions; the guarantee applies only to Reddit post <strong>impressions</strong> as defined in Section 4.1.</li>
           </ul>
         </section>
 
@@ -156,11 +155,11 @@ export default function TermsAndConditions() {
           <h2 className="text-2xl font-semibold mb-4">
             7. Warranty Disclaimer
           </h2>
-          <p className="text-gray-700 uppercase">
-            The Software is provided "as is", without warranty of any kind,
-            express or implied. The developers of SupaSidebar make no
-            warranties, claims or representations and expressly disclaim all
-            such warranties.
+          <p className="text-gray-700">
+            Except for the specific guarantees outlined in the Refund Policy,
+            our services are provided "as is" without warranty of any kind,
+            express or implied. Reddit CoFounder makes no warranties about
+            specific outcomes beyond the stated guarantees.
           </p>
         </section>
 
@@ -169,10 +168,10 @@ export default function TermsAndConditions() {
             8. Limitation of Liability
           </h2>
           <p className="text-gray-700">
-            In no event shall the developers of SupaSidebar be liable for any
-            special, incidental, indirect or consequential damages whatsoever
-            arising out of or in any way related to the use of or inability to
-            use the Software.
+            In no event shall Reddit CoFounder be liable for any special,
+            incidental, indirect or consequential damages whatsoever arising
+            out of or in any way related to the use of our services, except
+            as specifically provided in our refund policy.
           </p>
         </section>
 
@@ -180,8 +179,8 @@ export default function TermsAndConditions() {
           <h2 className="text-2xl font-semibold mb-4">9. Changes to Terms</h2>
           <p className="text-gray-700">
             We reserve the right to modify these terms at any time. We will
-            notify users of any material changes through the Software or via
-            email.
+            notify clients of any material changes via email or through our
+            website.
           </p>
         </section>
 
@@ -190,14 +189,14 @@ export default function TermsAndConditions() {
             10. Contact Information
           </h2>
           <p className="text-gray-700">
-            SupaSidebar is developed and maintained by an independent developer.
+            Reddit CoFounder is operated by an independent service provider.
             For support, questions about these terms, or refund requests, please
             contact us at{" "}
             <a
-              href="mailto:admin@supasidebar.com"
+              href="mailto:admin@redditcofounder.com"
               className="text-blue-600 hover:text-blue-800"
             >
-              admin@supasidebar.com
+              admin@redditcofounder.com
             </a>
             .
           </p>
@@ -206,15 +205,30 @@ export default function TermsAndConditions() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">11. Governing Law</h2>
           <p className="text-gray-700">
-            These terms shall be governed by and construed in accordance with
-            the laws of the applicable jurisdiction, without regard to its
-            conflict of law provisions.
+            These Terms are governed by the laws of India. The courts of New Delhi, India, shall have exclusive jurisdiction.
           </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">12. Confidentiality & Case Studies</h2>
+          <p className="text-gray-700">
+            We will not disclose non-public client information except to deliver the Service or as required by law.
+            We may use anonymized performance data in our marketing. Public use of your brand name, logo, or identifiable results requires your prior written consent.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">13. Payments, Chargebacks & Taxes</h2>
+          <ul className="list-disc pl-5 text-gray-700">
+            <li>All fees are due in advance unless otherwise agreed in writing.</li>
+            <li>Initiating a chargeback while services are in progress voids any guarantees and may result in immediate suspension.</li>
+            <li>Client is responsible for any applicable taxes, duties, or payment processor fees not included in the price.</li>
+          </ul>
         </section>
       </div>
 
       <div className="mt-8 text-sm text-gray-500">
-        Last updated: August 3, 2025
+        Last updated: October 8, 2025
       </div>
     </div>
   );

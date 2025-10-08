@@ -16,7 +16,7 @@ function CTASection() {
               lineHeight: "1.2",
             }}
           >
-            Start with 50k+ views in 7 days or your money back
+            Get 50k+ views in 7 days or full refund
             {/* <br /> Stop Procrastinating.
           <br /> Be More Productive. */}
           </h2>
