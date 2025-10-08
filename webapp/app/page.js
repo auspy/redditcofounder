@@ -151,26 +151,26 @@ const homepageConfig = {
             betaPricing: {
               show: false,
             },
-            customBanner: {
-              show: true,
-              title: "Intro Pricing",
-              description: "First 10 clients get Quick Test for $350 (regular $500)",
-              style: "success",
-            },
+            // customBanner: {
+            //   show: true,
+            //   title: "Intro Pricing",
+            //   description: "First 10 clients get Quick Test for $350 (regular $500)",
+            //   style: "success",
+            // },
           },
 
           // Footer customization
           footer: {
             legalText:
-              "Prices in USD. 50k+ impressions guaranteed on Quick Test or full refund.",
+              "Prices in USD. 50k+ impressions guaranteed on 7-Days Growth Sprint or full refund.",
             contactText: "Questions about the service?",
-            contactLinkText: "DM on Twitter/X",
+            contactLinkText: "Talk to Founder",
           },
 
           // Additional components
           additionalComponents: {
             moneyBackGuarantee: {
-              show: true,
+              show: false,
               days: 7,
               text: "50,000+ impressions guaranteed or full refund"
             },
@@ -185,11 +185,11 @@ const homepageConfig = {
           stableCards: [
             {
               type: "pricing",
-              title: "Quick 7 Days Test",
+              title: "7-Days Reddit Growth Sprint",
               subtitle: "7 days",
               price: 350,
               originalPrice: 700,
-              buttonText: "Start Quick Test",
+              buttonText: "Start Growth Sprint",
               billingCycle: "one-time",
               beforeButtonNote: "Pilot offer - 50% off for first 5 clients",
               // highlightedText: "50k+ views guaranteed",
@@ -198,16 +198,18 @@ const homepageConfig = {
             },
             {
               type: "pricing",
-              title: "Monthly Growth",
+              title: "Elite",
               subtitle: "4 weeks",
               price: 1200,
               originalPrice: 2400,
               buttonText: "Book Intro Call",
               billingCycle: "monthly",
-              beforeButtonNote: "For ongoing growth",
+              beforeButtonNote: "Built for growing companies that need consistent organic growth from reddit",
               highlightedText: "200k+ monthly target",
               highlightTheme: "blue",
               features: monthlyGrowthFeatures,
+              customButtonType: "call-booking",
+              customDisplayText: "Custom",
             },
           ],
           toggleOptions: [

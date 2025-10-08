@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { cn, formatNumber } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import ButtonMainCTAClient from "@/components/buttons/ButtonMainCTA.client";
+import ButtonMainCTAClient, { TalkToFounderButton } from "@/components/buttons/ButtonMainCTA.client";
 import {
   trackDownloadButtonClick,
   trackButtonClick,
@@ -565,6 +565,10 @@ const PricingCard = ({
   title = null,
   // Theme for highlighted cards
   highlightTheme = "blue",
+  // Custom button type
+  customButtonType = null,
+  // Custom display text instead of price
+  customDisplayText = null,
 }) => {
   const { toast } = useToast();
   const [loading, setLoading] = React.useState(false);
@@ -647,46 +651,60 @@ const PricingCard = ({
                 </h3>
 
                 <div className="mt-2">
-                  {(isBetaDiscount && originalPrice) ||
-                  (pricingInfo.showSavings &&
-                    pricingInfo.originalDisplayPrice) ? (
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-lg text-gray-500 line-through">
-                        {currency}
-                        {formatNumber(
-                          isBetaDiscount
-                            ? originalPrice
-                            : pricingInfo.originalDisplayPrice
-                        )}
-                        {pricingInfo.showMonthlyIndicator ? "/month" : ""}
-                      </span>
-                      <span className="text-[10px] md:text-xs border bg-emerald-50 border-emerald-600 rounded-full px-1 md:px-2 py-1 font-medium text-emerald-600">
-                        {isBetaDiscount
-                          ? "50% OFF"
-                          : `${pricingInfo.savingsPercent}% OFF`}
+                  {customDisplayText ? (
+                    <div className="flex items-baseline">
+                      <span
+                        className={`text-4xl font-bold ${
+                          highlightedText ? theme.priceText : "text-gray-900"
+                        }`}
+                      >
+                        {customDisplayText}
                       </span>
                     </div>
-                  ) : null}
-                  <div className="flex items-baseline">
-                    <span
-                      className={`text-4xl font-bold ${
-                        highlightedText ? theme.priceText : "text-gray-900"
-                      }`}
-                    >
-                      {currency}
-                      {formatNumber(pricingInfo.displayPrice)}
-                    </span>
-                    {pricingInfo.showMonthlyIndicator && (
-                      <span className="text-lg font-medium text-gray-600 ml-1">
-                        /month
-                      </span>
-                    )}
-                    {billingCycle === "lifetime" && (
-                      <span className="text-lg font-medium text-gray-600 ml-1">
-                        /once
-                      </span>
-                    )}
-                  </div>
+                  ) : (
+                    <>
+                      {(isBetaDiscount && originalPrice) ||
+                      (pricingInfo.showSavings &&
+                        pricingInfo.originalDisplayPrice) ? (
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-lg text-gray-500 line-through">
+                            {currency}
+                            {formatNumber(
+                              isBetaDiscount
+                                ? originalPrice
+                                : pricingInfo.originalDisplayPrice
+                            )}
+                            {pricingInfo.showMonthlyIndicator ? "/month" : ""}
+                          </span>
+                          <span className="text-[10px] md:text-xs border bg-emerald-50 border-emerald-600 rounded-full px-1 md:px-2 py-1 font-medium text-emerald-600">
+                            {isBetaDiscount
+                              ? "50% OFF"
+                              : `${pricingInfo.savingsPercent}% OFF`}
+                          </span>
+                        </div>
+                      ) : null}
+                      <div className="flex items-baseline">
+                        <span
+                          className={`text-4xl font-bold ${
+                            highlightedText ? theme.priceText : "text-gray-900"
+                          }`}
+                        >
+                          {currency}
+                          {formatNumber(pricingInfo.displayPrice)}
+                        </span>
+                        {pricingInfo.showMonthlyIndicator && (
+                          <span className="text-lg font-medium text-gray-600 ml-1">
+                            /month
+                          </span>
+                        )}
+                        {billingCycle === "lifetime" && (
+                          <span className="text-lg font-medium text-gray-600 ml-1">
+                            /once
+                          </span>
+                        )}
+                      </div>
+                    </>
+                  )}
                   {/* Annual billing amount for yearly plans */}
                   {billingCycle === "yearly" && pricingInfo.billingAmount && (
                     <div className="mt-1">
@@ -791,6 +809,20 @@ const PricingCard = ({
                 text={buttonText || "Download For Free"}
                 className="w-full !bg-gradient-to-r !from-white !to-blue-50 !text-gray-800 !border-gray-200 hover:!from-primary hover:!to-blue-700 hover:!text-white hover:!border-primary [&_svg]:!fill-primary [&_svg]:hover:!fill-white"
               />
+            ) : customButtonType === "call-booking" ? (
+              <div className="w-full">
+                <Button
+                  onClick={() => window.open("https://cal.com/kshetez", "_blank")}
+                  className={`w-full py-5 px-4 text-sm font-medium transition-all duration-300 rounded-lg ${
+                    highlightedText
+                      ? `${theme.button} text-white shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-[0.99] hover:brightness-105 active:scale-[0.98]`
+                      : "border hover:scale-[0.99] active:scale-[0.98] border-primary/30 bg-white text-primary/90 hover:text-white hover:bg-primary hover:border-primary/40"
+                  }`}
+                >
+                  {buttonText}
+                  <ArrowRight className="ml-2 h-4 w-4 inline-block" />
+                </Button>
+              </div>
             ) : (
               <Button
                 onClick={handleButtonClick}
@@ -1325,6 +1357,8 @@ export default function PricingCards3({
                     yearlyDiscount={card.yearlyDiscount}
                     title={card.title}
                     highlightTheme={card.highlightTheme}
+                    customButtonType={card.customButtonType}
+                    customDisplayText={card.customDisplayText}
                   />
                 </div>
               );

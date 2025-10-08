@@ -33,6 +33,6 @@ export const getCTATextByVariant = (variant) => {
     case CTA_VARIANTS.DOWNLOAD_FREE:
       return "Download for Free";
     default:
-      return "Start 7 Days Quick Test";
+      return "Start 7 Days Growth Sprint";
   }
 };
