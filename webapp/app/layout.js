@@ -10,14 +10,14 @@ import BannerWrapper from "@/components/BannerWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
+  title: "RedditCofounder | Reddit Marketing on AutoPilot",
   description:
     "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
   keywords:
     "reddit marketing, reddit growth, reddit traffic, startup marketing, saas marketing, reddit advertising, social media marketing, content marketing, reddit promotion, traffic generation",
   metadataBase: new URL("https://redditcofounder.com"),
   openGraph: {
-    title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
+    title: "RedditCofounder | Reddit Marketing on AutoPilot",
     description:
       "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reddit Co-Founder — 50,000+ impressions in 7 days (guaranteed)",
+    title: "RedditCofounder | Reddit Marketing on AutoPilot",
     description:
       "Productized Reddit growth: 50k+ impressions in 7 days or refund. 2M+ organic views proven. Quick Test $350 (first 10 clients).",
     images: ["/opengraph-image.png"],

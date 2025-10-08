@@ -41,7 +41,7 @@ const monthlyGrowthFeatures = [
     desc: "Regular performance updates and insights",
   },
   {
-    title: "Target 200k+ monthly",
+    title: "Target 300k+ monthly",
     desc: "Aggressive growth targets with proven methods",
   },
 ];
@@ -64,10 +64,10 @@ const creativePackFeatures = [
 const homepageConfig = {
   hero: {
     preTitle: "Reddit Marketing on AutoPilot",
-    title: <><span className="text-primary">50K+ Organic Views</span> in <br className="hidden md:block" /> 7 days or Full Refund</>,
+    title: <><span className="text-primary">50K+ Organic Views</span> in <br className="hidden md:block" /> 7 days Guaranteed</>,
     description: (
       <>
-        Get organic traffic to your product through Reddit without lifting a finger, while you sleep. You build the product. I bring the traffic.
+        Get organic traffic to your product through Reddit without lifting a finger, while you sleep. You build the product. We bring the traffic.
       </>
     ),
     lessonHeader: true,
@@ -140,9 +140,9 @@ const homepageConfig = {
 
           // Header customization
           header: {
-            title:  "Organic Reddit Growth on AutoPilot",
+            title:  <>Grow Organic Reddit Traffic <br /> on <span className="text-primary">AutoPilot</span></>,
             description:
-              "No contracts, no BS. Just guaranteed Reddit traffic for your product. Start with a risk-free test or commit to ongoing growth.",
+              "A complete hands-off service for ambitious founders that need consistent organic growth from reddit",
             showTrialDays: false,
           },
 
@@ -204,7 +204,7 @@ const homepageConfig = {
               originalPrice: 2400,
               buttonText: "Book Intro Call",
               billingCycle: "monthly",
-              beforeButtonNote: "Built for growing companies that need consistent organic growth from reddit",
+              beforeButtonNote: "Built for ambitious founders that need consistent organic growth from reddit",
               highlightedText: "200k+ monthly target",
               highlightTheme: "elite",
               features: monthlyGrowthFeatures,

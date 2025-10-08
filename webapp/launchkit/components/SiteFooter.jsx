@@ -6,7 +6,7 @@ import Logo from "./Logo";
 const legalLinks = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms and Conditions" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/contact", label: "Talk to Founder" },
 ];
 
 const contentLinks = [
@@ -32,9 +32,9 @@ export function SiteFooter() {
           <div className="space-y-3">
             <Logo />
 
-            <p className="text-sm text-gray-600">Arc like Sidebar for Mac</p>
+            <p className="text-sm text-gray-600">Reddit Marketing on AutoPilot</p>
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} SupaSidebar
+              © {new Date().getFullYear()} RedditCofounder
             </p>
           </div>
 
