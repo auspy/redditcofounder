@@ -462,8 +462,12 @@ export default function Header({ bootstrap = null }) {
       href: "/#how-it-works",
     },
     {
-      isTalkToFounderButton: true,
+      label: "Talk to Founder",
+      href: "/contact",
     },
+    // {
+    //   isTalkToFounderButton: true,
+    // },
     // {},
     // {
     //   label: "Manage License",

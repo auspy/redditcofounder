@@ -21,6 +21,7 @@ import {
 import Header from "@/components/Header";
 import SiteFooter from "@/components/SiteFooter";
 import PageHeader from "@/components/PageHeader";
+import ContactOptions from "@/components/contact/ContactOptions";
 
 export default function ContactPage({ config = {} }) {
   const {
@@ -126,8 +127,25 @@ export default function ContactPage({ config = {} }) {
           />
         )}
 
+        {/* Contact Options Section */}
+        <div className="max-w-4xl mx-auto w-full px-4 py-8">
+          <ContactOptions />
+        </div>
+
+        {/* Divider */}
+        <div className="max-w-4xl mx-auto w-full px-4">
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-3 bg-gray-50 text-gray-500">or send a detailed message</span>
+            </div>
+          </div>
+        </div>
+
         <div className={ui.formContainerClassName || "flex-1 max-w-xl mx-auto w-full px-4 py-8"}>
-          <form onSubmit={handleSubmit} className={ui.formClassName || "space-y-6"}>
+          <form id="contact-form" onSubmit={handleSubmit} className={ui.formClassName || "space-y-6"}>
             {/* Email Field */}
             <div className={ui.fieldClassName || "space-y-1.5"}>
               <label

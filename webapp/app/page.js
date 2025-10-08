@@ -8,17 +8,14 @@ export function generateStaticParams() {
 }
 
 const quickTestFeatures = [
-  {
-    title: "3 competitor strategy mini-report",
-    desc: "Research on what's working in your space",
-  },
-  {
-    title: "5 posts across relevant subs",
-    desc: "Strategic content crafted for maximum engagement",
-  },
+ 
   {
     title: "7 days engagement",
     desc: "Active comment management and community interaction",
+  },
+  {
+    title: "Unlimited expert posts",
+    desc: "We create content and get you 50k+ views",
   },
   {
     title: "Report + screenshots",
@@ -31,10 +28,6 @@ const quickTestFeatures = [
 ];
 
 const monthlyGrowthFeatures = [
-  {
-    title: "8–12 posts monthly",
-    desc: "Consistent content calendar for sustained growth",
-  },
   {
     title: "Daily engagement",
     desc: "Ongoing comment management and community building",
@@ -112,16 +105,24 @@ const homepageConfig = {
     productivityLoss: { enabled: false },
     testimonialSingle: { enabled: true },
     impactSection: { enabled: false },
+    beforeAfter: {
+      enabled: true,
+      props: {
+        title: "The Reality of DIY Reddit Marketing",
+        subtitle: "Stop struggling with Reddit. Let us handle the traffic while you build.",
+        badgeText: "Before vs After"
+      }
+    },
     redditResults: {
       enabled: true,
       props: {
         images: realRedditResultsData,
-        title: <> 2.2 Million+ Organic Views</>,
+        title: <span className="text-primary"> 2.2 Million+ Organic Views</span>,
         description: "It's not a lucky break. It's a strategic approach to Reddit marketing.",
         badge: "Real Results",
         variant: "multicolumn",
         cardVariant: "imageOnly",
-        limit: 7,
+        limit: 6,
         maxViews: 250000,
         viewMore: {
           text: "View All Results",
@@ -139,7 +140,7 @@ const homepageConfig = {
 
           // Header customization
           header: {
-            title: "Choose Your Reddit Growth Package",
+            title:  "Organic Reddit Growth on AutoPilot",
             description:
               "No contracts, no BS. Just guaranteed Reddit traffic for your product. Start with a risk-free test or commit to ongoing growth.",
             showTrialDays: false,
@@ -184,13 +185,13 @@ const homepageConfig = {
           stableCards: [
             {
               type: "pricing",
-              title: "Quick Test",
+              title: "Quick 7 Days Test",
               subtitle: "7 days",
               price: 350,
               originalPrice: 700,
               buttonText: "Start Quick Test",
               billingCycle: "one-time",
-              beforeButtonNote: "Intro price - first 10 clients",
+              beforeButtonNote: "Pilot offer - 50% off for first 5 clients",
               // highlightedText: "50k+ views guaranteed",
               // highlightTheme: "green",
               features: quickTestFeatures,
@@ -271,12 +272,12 @@ const homepageConfig = {
         title: "Test Reddit without risk",
         description: "Start building your Reddit presence today with guaranteed results.",
         primaryButton: {
-          text: "Start the Quick Test — $350",
-          href: "#stripe-checkout"
+          text: "Start the Quick Test",
+          href: "/#pricing"
         },
         secondaryButton: {
           text: "Join Waitlist / Ask a Question",
-          href: "#lead-modal"
+          href: "/contact"
         }
       }
     },
@@ -285,12 +286,14 @@ const homepageConfig = {
 
   // Custom spacing to match original
   spacing: {
-    afterHero: "mb-24 md:mb-48 lg:mb-64",
-    afterFeatureBanner: "mb-24 md:mb-48 lg:mb-64",
-    afterRedditResults: "mb-12 md:mb-24 lg:mb-32",
+    afterHero: "mb-16 md:mb-32 lg:mb-48",
+    // afterBeforeAfter: "mb-16 md:mb-24 lg:mb-32",
+    // afterFeatureBanner: "mb-24 md:mb-48 lg:mb-64",
+    afterRedditResults: "mb-12 md:mb-24 lg:mb-48",
     afterFeatureList: "mb-12 md:mb-24 lg:mb-32",
-    afterImpact: "mb-12 md:mb-24 lg:mb-32",
-    afterTestimonials: "mb-24 md:mb-48 lg:mb-64",
+    afterBeforeAfter: "mb-12 md:mb-24 lg:mb-48",
+    // afterImpact: "mb-12 md:mb-24 lg:mb-32",
+    // afterTestimonials: "mb-24 md:mb-48 lg:mb-64",
     afterCta: "mb-12 md:mb-24 lg:mb-32",
   },
 };

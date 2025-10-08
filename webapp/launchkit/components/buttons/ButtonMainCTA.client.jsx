@@ -20,6 +20,79 @@ import { FEATURE_FLAGS, getCTATextByVariant } from "@/lib/flags/featureFlags";
 import { FreeForeverLink } from "@/components/alerts/MoneyBackGuaranteeAlert";
 import { LightningBoltIcon } from "@radix-ui/react-icons";
 
+// ContactWidget Component
+const ContactWidget = ({ className = "" }) => {
+  const handleLinkedInClick = (e) => {
+    e.stopPropagation();
+    window.open("https://linkedin.com/in/kshetezvinayak", "_blank");
+  };
+
+  const handleTwitterClick = (e) => {
+    e.stopPropagation();
+    window.open("https://twitter.com/kshetezvinayak", "_blank");
+  };
+
+  const handleEmailClick = (e) => {
+    e.stopPropagation();
+    window.open("mailto:hello@redditcofounder.com", "_blank");
+  };
+
+  return (
+    <div
+      className={`inline-flex items-center gap-3 bg-slate-800 text-white px-4 py-3 rounded-lg transition-colors duration-200 ${className}`}
+    >
+      {/* Profile Image Placeholder - replace with actual image */}
+      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
+        K
+      </div>
+
+      {/* Text Content */}
+      <div className="flex flex-col">
+        <div className="flex items-center gap-1">
+          <span className="text-white font-medium text-sm">Got a question?</span>
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-white"
+          >
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+          </svg>
+        </div>
+        <div className="text-slate-300 text-xs">
+          DM me on{" "}
+          <button
+            onClick={handleLinkedInClick}
+            className="text-blue-400 hover:text-blue-300 underline transition-colors"
+          >
+            LinkedIn
+          </button>
+          ,{" "}
+          <button
+            onClick={handleTwitterClick}
+            className="text-blue-400 hover:text-blue-300 underline transition-colors"
+          >
+            Twitter
+          </button>
+          {" "}or by{" "}
+          <button
+            onClick={handleEmailClick}
+            className="text-blue-400 hover:text-blue-300 underline transition-colors"
+          >
+            Email
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Utility function to open Cal.com in new tab
 export const talkToFounder = () => {
   window.open("https://cal.com/kshetez", "_blank");
@@ -52,7 +125,7 @@ export const TalkToFounderButton = ({
   return (
     <button
       onClick={talkToFounder}
-      className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition-all font-medium ${sizeClasses[size]} ${className}`}
+      className={`inline-flex w-full md:w-auto items-center justify-center gap-2 whitespace-nowrap rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition-all font-medium ${sizeClasses[size]} ${className}`}
     >
       {text}
     </button>
@@ -285,12 +358,12 @@ export default function ButtonMainCTAClient({
           50% Discount for First 5 Clients
         </p> */}
       </div>
-      <div className="flex flex-wrap items-center sm:justify-center gap-4">
+      <div className="flex w-full  md:flex-row flex-col items-center sm:justify-center md:gap-4 gap-2">
         <FancyButton
           {...(as === "link" && !isDownloadAction ? { href: "#" } : {})}
           onClick={handleClick}
           style={{ minWidth: "200px" }}
-          className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:brightness-110 transition-all px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl group relative"
+          className="inline-flex w-full md:w-auto items-center justify-center whitespace-nowrap rounded-md text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:brightness-110 transition-all px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl group relative"
           disabled={isLoading}
         >
           {/* <svg
@@ -326,7 +399,7 @@ export default function ButtonMainCTAClient({
         </FancyButton>
         {/* <ButtonHowItWorks /> */}
         <TalkToFounderButton className={className} text="Book Intro Call" />
-        
+
       </div>
       <div className={`flex items-${align} flex-col gap-1 mt-0.5`}>
         <Button

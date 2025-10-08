@@ -191,7 +191,7 @@ export default function Hero({
 
           <div className="mt-6 " />
           <TopPoints labels={keyPoints} align={align} />
-          <div className="mt-6 " />
+          <div className="md:mt-6 " />
           {primaryButton ? (
             <div className="flex gap-4">
               {primaryButton.text.toLowerCase().includes("download") ? (

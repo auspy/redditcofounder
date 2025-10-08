@@ -142,7 +142,7 @@ export default function ImageSection({
           <div className="flex justify-center mt-12">
             <a
               href={viewMore.href}
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-primary hover:text-primary/80   transition-colors duration-200"
             >
               {viewMore.text || "View More"}
               <svg

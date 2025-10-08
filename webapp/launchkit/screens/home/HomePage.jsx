@@ -14,6 +14,7 @@ import ProductivityLoss from "@/components/ProductivityLoss";
 import TestimonialSingle from "@/components/testimonials/TestimonialSingle";
 import ImageSection from "@/components/images/ImageSection";
 import HowItWorksSection from "@/components/howItWorks/HowItWorksSection";
+import BeforeAfterSection from "@/components/homePage/BeforeAfterSection";
 
 export default function HomePage({ config }) {
   const { hero, sections = {}, spacing = {}, siteConfig } = config;
@@ -55,6 +56,8 @@ export default function HomePage({ config }) {
       )}
 
       <div className={finalSpacing.afterHero} />
+
+     
 
       {/* Reddit Results Section */}
       {sections.redditResults?.enabled && (
@@ -126,6 +129,13 @@ export default function HomePage({ config }) {
             </>
           )}
           <div className={finalSpacing.afterTestimonials} />
+        </>
+      )}
+       {/* Before/After Section */}
+       {sections.beforeAfter?.enabled && (
+        <>
+          <BeforeAfterSection {...sections.beforeAfter.props} />
+          <div className={finalSpacing.afterBeforeAfter} />
         </>
       )}
 

@@ -24,14 +24,7 @@ const allRedditResultsData = [
     totalViews: "504k",
     totalViewsNumeric: 504000
   },
-  {
-    imageUrl: "/reddit-results/SCR-20251003-cnsv.png",
-    title: "Startup Success Story",
-    description: "Bootstrap startup story inspired thousands in r/entrepreneur, driving significant traffic and signups",
-    stats: { upvotes: 1654, comments: 189, views: "59.7k" },
-    totalViews: "18k",
-    totalViewsNumeric: 18000
-  },
+
   {
     imageUrl: "/reddit-results/SCR-20251003-cnqo.png",
     title: "SaaS Growth Hack Viral",
@@ -48,14 +41,7 @@ const allRedditResultsData = [
     totalViews: "61k",
     totalViewsNumeric: 61000
   },
-  {
-    imageUrl: "/reddit-results/SCR-20251003-cnow.png",
-    title: "Technical Tutorial Viral",
-    description: "In-depth technical tutorial reached front page of r/programming, establishing thought leadership",
-    stats: { upvotes: 1987, comments: 301, views: "52.4k" },
-    totalViews: "28k",
-    totalViewsNumeric: 28000
-  },
+
   {
     imageUrl: "/reddit-results/SCR-20251003-cmus.png",
     title: "Productivity Tool Launch",
@@ -72,14 +58,7 @@ const allRedditResultsData = [
     totalViews: "47k",
     totalViewsNumeric: 47000
   },
-  {
-    imageUrl: "/reddit-results/SCR-20251003-cnmp.png",
-    title: "E-commerce Case Study",
-    description: "E-commerce growth case study shared in relevant communities drove significant referral traffic",
-    stats: { upvotes: 1234, comments: 167, views: "44.2k" },
-    totalViews: "16k",
-    totalViewsNumeric: 16000
-  },
+
   {
     imageUrl: "/reddit-results/SCR-20251003-clya.png",
     title: "Mobile App Launch",
@@ -145,6 +124,14 @@ const allRedditResultsData = [
     totalViewsNumeric: 30000
   },
   {
+    imageUrl: "/reddit-results/SCR-20251003-cnow.png",
+    title: "Technical Tutorial Viral",
+    description: "In-depth technical tutorial reached front page of r/programming, establishing thought leadership",
+    stats: { upvotes: 1987, comments: 301, views: "52.4k" },
+    totalViews: "28k",
+    totalViewsNumeric: 28000
+  },
+  {
     imageUrl: "/reddit-results/SCR-20251003-cmsv.png",
     title: "Fintech App Breakthrough",
     description: "Fintech app announcement in r/personalfinance resulted in significant user acquisition",
@@ -193,12 +180,28 @@ const allRedditResultsData = [
     totalViewsNumeric: 19000
   },
   {
+    imageUrl: "/reddit-results/SCR-20251003-cnsv.png",
+    title: "Startup Success Story",
+    description: "Bootstrap startup story inspired thousands in r/entrepreneur, driving significant traffic and signups",
+    stats: { upvotes: 1654, comments: 189, views: "59.7k" },
+    totalViews: "18k",
+    totalViewsNumeric: 18000
+  },
+  {
     imageUrl: "/reddit-results/SCR-20251003-ckrl.png",
     title: "SaaS Tool Launch Success",
     description: "Strategic post in r/entrepreneur generated massive engagement and drove 200+ signups in 48 hours",
     stats: { upvotes: 342, comments: 67, views: "15.2k" },
     totalViews: "15k",
     totalViewsNumeric: 15000
+  },
+  {
+    imageUrl: "/reddit-results/SCR-20251003-cnmp.png",
+    title: "E-commerce Case Study",
+    description: "E-commerce growth case study shared in relevant communities drove significant referral traffic",
+    stats: { upvotes: 1234, comments: 167, views: "44.2k" },
+    totalViews: "16k",
+    totalViewsNumeric: 16000
   },
   {
     imageUrl: "/reddit-results/SCR-20251003-cmdz.png",
@@ -215,7 +218,7 @@ const allRedditResultsData = [
     stats: { upvotes: 456, comments: 89, views: "12.1k" },
     totalViews: "9.5k",
     totalViewsNumeric: 9500
-  }
+  },
 ];
 
 export const realRedditResultsData = allRedditResultsData;
