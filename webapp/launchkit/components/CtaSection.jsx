@@ -16,16 +16,17 @@ function CTASection() {
               lineHeight: "1.2",
             }}
           >
-            Take your productivity to the next level!
+            Start with 50k+ views in 7 days or your money back
             {/* <br /> Stop Procrastinating.
           <br /> Be More Productive. */}
           </h2>
-          <p className="text-lg text-white/80">
+          {/* <p className="text-lg text-white/80">
             Join with peace of mind. We have a {moneyBackDays} day money back
             guarantee.
-          </p>
+          </p> */}
           <div className="flex flex-col items-center mb-10 justify-center">
             <ButtonMainCTA
+              href="/#pricing"
               location={Locations.CTA_SECTION}
               type="large"
               mode="dark"
