@@ -4,6 +4,7 @@ const nextConfig = {
   outputFileTracingRoot: process.cwd(),
   outputFileTracingExcludes: {
     "*": ["swiftapp/**/*", ".next/cache/**/*"],
+  },
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
