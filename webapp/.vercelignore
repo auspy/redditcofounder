@@ -1,9 +1,16 @@
 # Swift app directory - exclude entire macOS app
 swiftapp/
 
-# Next.js cache and build artifacts
-.next/cache/
-.next/trace/
+# Next.js cache and build artifacts - be very explicit
+.next/cache
+.next/trace
+node_modules
+
+# Package managers
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+node_modules/.pnpm/**/*
 
 # Development and build artifacts
 *.log
@@ -11,10 +18,21 @@ swiftapp/
 .env*.local
 
 # Git and IDE files
-.git/
-.vscode/
-.idea/
+.git/**/*
+.vscode/**/*
+.idea/**/*
 
 # Test coverage and reports
-coverage/
+coverage/**/*
 *.lcov
+
+# Large static assets that might not be needed for core functionality
+*.mov
+*.mp4
+*.avi
+
+# Development tools
+.eslintcache
+.turbo/**/*
+
+# Keep images that are needed by the app

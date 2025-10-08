@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
-  outputFileTracingRoot: process.cwd(),
+  // output: "standalone",
+  // outputFileTracingRoot: process.cwd(),
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
@@ -10,19 +10,21 @@ const nextConfig = {
     LIFETIME_URL: process.env.LIFETIME_URL,
     LIFETIME_5_DEVICES_PRODUCT_ID: process.env.LIFETIME_5_DEVICES_PRODUCT_ID,
     DOWNLOAD_URL: process.env.DOWNLOAD_URL,
-    
+
     // Subscription products
     MONTHLY_PRODUCT_ID: process.env.MONTHLY_PRODUCT_ID,
     YEARLY_PRODUCT_ID: process.env.YEARLY_PRODUCT_ID,
-    
+
     // Optional: India-specific subscriptions
     MONTHLY_IN_PRODUCT_ID: process.env.MONTHLY_IN_PRODUCT_ID,
     YEARLY_IN_PRODUCT_ID: process.env.YEARLY_IN_PRODUCT_ID,
   },
   images: {
-    remotePatterns: [{
-      hostname: "images.unsplash.com",
-    }],
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
   async headers() {
     return [
