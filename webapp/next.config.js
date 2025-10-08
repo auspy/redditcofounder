@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "standalone",
-  // outputFileTracingRoot: process.cwd(),
+  output: "standalone",
+  outputFileTracingRoot: process.cwd(),
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
