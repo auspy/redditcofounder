@@ -40,4 +40,10 @@ const config = {
   },
 };
 
-export const GET = createDownloadVerifyHandler(config);
+// Create the configured handler
+const downloadVerifyHandler = createDownloadVerifyHandler(config);
+
+// Export Next.js App Router compatible handler
+export async function GET(request, context) {
+  return downloadVerifyHandler(request, context);
+}

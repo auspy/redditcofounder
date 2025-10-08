@@ -13,7 +13,7 @@ export default function FeatureVideo({
   ...props
 }) {
   const videoId = src.split(".")[0]; // Extract the video ID from the file name
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (!videoRef.current) return;

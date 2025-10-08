@@ -138,6 +138,9 @@ async function decryptPayload(
   encryptedPayload: string
 ): Promise<string | null> {
   try {
+    if (!PRIVATE_KEY) {
+      throw new Error("PRIVATE_KEY environment variable is not set");
+    }
     const pemKey = base64ToPEM(PRIVATE_KEY);
     const privateKeyBuffer = pemToArrayBuffer(pemKey);
     const privateKey = await crypto.subtle.importKey(

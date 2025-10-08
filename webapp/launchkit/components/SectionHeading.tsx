@@ -4,7 +4,7 @@ export default function SectionHeading({
   title,
   badge = null,
   description = null,
-  headingSize = null,
+  headingSize = "h2",
   containerClassName = null,
 }: {
   title: string;

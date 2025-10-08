@@ -21,4 +21,10 @@ const config = {
   },
 };
 
-export const POST = createPaymentHandler(config);
+// Create the configured handler
+const paymentHandler = createPaymentHandler(config);
+
+// Export Next.js App Router compatible handler
+export async function POST(request, context) {
+  return paymentHandler(request, context);
+}
