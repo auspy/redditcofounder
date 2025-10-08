@@ -206,7 +206,7 @@ const homepageConfig = {
               billingCycle: "monthly",
               beforeButtonNote: "Built for growing companies that need consistent organic growth from reddit",
               highlightedText: "200k+ monthly target",
-              highlightTheme: "blue",
+              highlightTheme: "elite",
               features: monthlyGrowthFeatures,
               customButtonType: "call-booking",
               customDisplayText: "Custom",

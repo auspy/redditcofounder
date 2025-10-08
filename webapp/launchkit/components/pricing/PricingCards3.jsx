@@ -75,6 +75,20 @@ const HIGHLIGHT_THEMES = {
       icon: "text-amber-500",
     },
   },
+  elite: {
+    border: "border-orange-400 ring-2 ring-orange-400",
+    hoverBorder: "border-orange-200",
+    badge: "bg-gradient-to-r from-orange-500 to-red-500",
+    titleText: "text-orange-600",
+    priceText: "text-orange-600",
+    button:
+      "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-red-600 hover:shadow-lg",
+    checkmark: {
+      border: "border-orange-500",
+      background: "bg-orange-50",
+      icon: "text-orange-500",
+    },
+  },
 };
 
 // Pricing Constants

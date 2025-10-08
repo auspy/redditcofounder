@@ -17,11 +17,6 @@ const contentLinks = [
 
 const socialLinks = [
   {
-    href: "https://github.com/auspy",
-    label: "github.com/auspy",
-    icon: <Github className="h-4 w-4" />,
-  },
-  {
     href: "https://x.com/kshetezvinayak",
     label: "x.com/kshetezvinayak",
     icon: <Twitter className="h-4 w-4" />,
